@@ -37,4 +37,8 @@ for (const [name, pattern] of required) {
 for (const path of ['robots.txt', 'sitemap.xml', 'privacy.html', 'terms.html']) {
   assert.ok(fs.existsSync(path), 'Missing file: ' + path);
 }
-console.log('PDF Engine static smoke tests passed (' + required.length + ' checks + SEO/legal files).');
+const dataKeys = Array.from(html.matchAll(/"key":"([^"]+)"/g), m => m[1]);
+const implemented = new Set(Array.from(html.matchAll(/TOOLS\.([A-Za-z0-9_]+)\s*=/g), m => m[1]));
+assert.equal(dataKeys.length, 20, 'Expected 20 tool metadata entries');
+for (const key of dataKeys) assert.ok(implemented.has(key), 'Missing implementation for tool: ' + key);
+console.log('PDF Engine static smoke tests passed (' + required.length + ' checks + 20 tool implementation mappings + SEO/legal files).');
