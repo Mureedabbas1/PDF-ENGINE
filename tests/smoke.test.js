@@ -34,12 +34,24 @@ for (const [name, pattern] of required) {
     assert.match(html, pattern, 'Missing: ' + name);
   }
 }
-for (const path of ['robots.txt', 'sitemap.xml', 'privacy.html', 'terms.html']) {
+for (const path of ['robots.txt', 'sitemap.xml', 'privacy.html', 'terms.html', 'about.html', 'contact.html', 'guides/index.html', 'tools/index.html', 'guides/merge-pdf-files.html', 'guides/split-pdf-pages.html', 'guides/compress-pdf.html', 'guides/pdf-to-jpg.html']) {
   assert.ok(fs.existsSync(path), 'Missing file: ' + path);
 }
 assert.equal((html.match(/class="tool-card glass tilt reveal"/g) || []).length, 20, 'Expected all 20 tools to be present in homepage HTML');
 assert.ok(html.includes('href="#/extract-pages"'), 'Extract Pages card must link to its tool route');
 assert.ok(html.includes('href="#/edit-pdf-metadata"'), 'Edit Metadata card must link to its tool route');
+
+assert.ok(!html.includes('contact@example.com'), 'Contact placeholder must be removed');
+assert.ok(!html.includes('aria-label="Advertisement"'), 'Do not show fake ad placeholders before AdSense setup');
+assert.ok(!html.includes('href="#"'), 'Remove empty social/navigation links');
+const sitemap = fs.readFileSync('sitemap.xml', 'utf8');
+const toolSlugsForPages = Array.from(html.matchAll(/"slug":"([^"]+)"/g), m => m[1]);
+for (const slug of toolSlugsForPages) {
+  assert.ok(fs.existsSync('tools/' + slug + '.html'), 'Missing indexable tool landing page: ' + slug);
+  assert.ok(sitemap.includes('/tools/' + slug + '.html'), 'Tool landing page missing from sitemap: ' + slug);
+}
+assert.ok(sitemap.includes('/guides/merge-pdf-files.html'), 'Guides missing from sitemap');
+assert.ok(sitemap.includes('/about.html') && sitemap.includes('/contact.html'), 'About/contact missing from sitemap');
 
 const dataKeys = Array.from(html.matchAll(/"key":"([^"]+)"/g), m => m[1]);
 const implemented = new Set(Array.from(html.matchAll(/TOOLS\.([A-Za-z0-9_]+)\s*=/g), m => m[1]));
