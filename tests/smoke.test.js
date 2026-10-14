@@ -16,7 +16,7 @@ const required = [
   ['word counter tool', /TOOLS\.wordcounter\s*=/],
   ['age calculator tool', /TOOLS\.age\s*=/],
   ['image compressor tool', /TOOLS\.imgcompress\s*=/],
-  ['QR code tool', /TOOLS\.qr\s*=/],
+  ['QR code library', /qrcode-generator/],
   ['20 tool metadata entries', (html.match(/"slug":/g) || []).length === 20 ? /./ : /NEVER_MATCH_THIS/],
   ['page extraction tool', /TOOLS\.extract\s*=/],
   ['page removal tool', /TOOLS\.remove\s*=/],
