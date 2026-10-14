@@ -37,6 +37,10 @@ for (const [name, pattern] of required) {
 for (const path of ['robots.txt', 'sitemap.xml', 'privacy.html', 'terms.html']) {
   assert.ok(fs.existsSync(path), 'Missing file: ' + path);
 }
+assert.equal((html.match(/class="tool-card glass tilt reveal"/g) || []).length, 20, 'Expected all 20 tools to be present in homepage HTML');
+assert.match(html, /href="#\\/extract-pages"/, 'Extract Pages card must link to its tool route');
+assert.match(html, /href="#\\/edit-pdf-metadata"/, 'Edit Metadata card must link to its tool route');
+
 const dataKeys = Array.from(html.matchAll(/"key":"([^"]+)"/g), m => m[1]);
 const implemented = new Set(Array.from(html.matchAll(/TOOLS\.([A-Za-z0-9_]+)\s*=/g), m => m[1]));
 assert.equal(dataKeys.length, 20, 'Expected 20 tool metadata entries');
