@@ -1,4 +1,4 @@
-name: Deploy PDF Engine to GitHub Pages
+name: Test and deploy PDF Engine
 
 on:
   push:
@@ -15,7 +15,16 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Run static smoke tests
+        run: node tests/smoke.test.js
+
   deploy:
+    needs: test
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
