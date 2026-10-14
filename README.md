@@ -2,17 +2,13 @@
 
 **Every PDF tool. One powerful engine.**
 
-A responsive, browser-first PDF tools website. Files selected for supported operations are processed locally in the browser; no account is required.
+Responsive, browser-first PDF utilities. Selected files are processed in the browser for supported operations; no sign-up or server-side file storage is provided by this static site.
 
-## Deploy with GitHub Pages
-
-This repository includes a GitHub Actions workflow that publishes the root of the `main` branch to GitHub Pages. In GitHub, open **Settings → Pages** and ensure **Build and deployment → Source** is set to **GitHub Actions**.
-
-After the first successful workflow, the site should be available at:
+## Live site
 
 https://mureedabbas1.github.io/PDF-ENGINE/
 
-## Current tools
+## Tools
 
 - Merge PDF
 - Split PDF by page ranges
@@ -20,18 +16,31 @@ https://mureedabbas1.github.io/PDF-ENGINE/
 - Add page numbers
 - Add text watermark
 - JPG/PNG to PDF
-- PDF structure rewrite (not full image compression)
+- PDF pages to JPG images (downloaded as ZIP)
+- Basic PDF structural optimization (not full image recompression)
 - Word counter
 - Age calculator
-- Image compression
+- Image compressor
+- QR code generator
 
-PDF operations use pdf-lib from a CDN. Large, encrypted, malformed, or unusual PDFs may fail. Test outputs before relying on them.
+## Deploy
 
-## Before production
+A GitHub Actions workflow in `.github/workflows/pages.yml` deploys the repository root to GitHub Pages on pushes to `main`. In **Settings → Pages**, set **Build and deployment → Source** to **GitHub Actions**. Confirm the workflow succeeds in the Actions tab before sharing the site.
 
-- Self-host and pin JavaScript dependencies.
-- Replace the placeholder contact email.
-- Add a final privacy policy and terms reviewed for the services you actually use.
-- Add a custom domain, canonical URL, sitemap and robots.txt when ready.
-- Configure and disclose analytics/advertising only after those services are actually installed.
-- Test the complete tool flow on mobile and desktop.
+## SEO files
+
+- `robots.txt`
+- `sitemap.xml`
+- Canonical and Open Graph metadata
+- Standalone `privacy.html` and `terms.html`
+
+## Known limitations / production checklist
+
+- PDF tools use third-party CDN libraries; network access is required to load them.
+- Browser support and large/encrypted/unusual PDFs still require real-device testing.
+- PDF optimization uses PDF structural rewrite and object streams; it does not recompress embedded images and may not shrink every file.
+- Image-to-PDF currently supports JPG/JPEG and PNG.
+- No automated browser test suite is included yet.
+- Analytics and AdSense are not configured; add them only after completing required privacy disclosures and consent handling.
+- Before using a custom domain, update canonical URLs, sitemap URLs and robots.txt.
+- Review legal text for your actual business and applicable local requirements.
