@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://mureedabbas1.github.io/PDF-ENGINE/</loc></url>
+  <url><loc>https://mureedabbas1.github.io/PDF-ENGINE/about.html</loc></url>
+  <url><loc>https://mureedabbas1.github.io/PDF-ENGINE/contact.html</loc></url>
   <url><loc>https://mureedabbas1.github.io/PDF-ENGINE/privacy.html</loc></url>
   <url><loc>https://mureedabbas1.github.io/PDF-ENGINE/terms.html</loc></url>
+  <url><loc>https://mureedabbas1.github.io/PDF-ENGINE/guides/</loc></url>
+  <url><loc>https://mureedabbas1.github.io/PDF-ENGINE/guides/merge-pdf-files.html</loc></url>
+  <url><loc>https://mureedabbas1.github.io/PDF-ENGINE/guides/split-pdf-pages.html</loc></url>
+  <url><loc>https://mureedabbas1.github.io/PDF-ENGINE/guides/compress-pdf.html</loc></url>
+  <url><loc>https://mureedabbas1.github.io/PDF-ENGINE/guides/pdf-to-jpg.html</loc></url>
 </urlset>
