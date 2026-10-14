@@ -34,7 +34,7 @@ for (const [name, pattern] of required) {
     assert.match(html, pattern, 'Missing: ' + name);
   }
 }
-for (const path of ['robots.txt', 'sitemap.xml', 'privacy.html', 'terms.html', 'about.html', 'contact.html', 'guides/index.html', 'tools/index.html', 'guides/merge-pdf-files.html', 'guides/split-pdf-pages.html', 'guides/compress-pdf.html', 'guides/pdf-to-jpg.html']) {
+for (const path of ['robots.txt', 'sitemap.xml', 'privacy.html', 'terms.html', 'about.html', 'contact.html', 'guides/index.html', 'tools/index.html', 'guides/merge-pdf-files.html', 'guides/split-pdf-pages.html', 'guides/compress-pdf.html', 'guides/pdf-to-jpg.html', 'guides/jpg-to-pdf-guide.html', 'guides/rotate-pdf-guide.html', 'guides/add-page-numbers-guide.html', 'guides/add-watermark-guide.html', 'guides/word-counter-guide.html', 'guides/age-calculator-guide.html', 'guides/image-compressor-guide.html', 'guides/qr-code-guide.html', 'guides/extract-pdf-pages-guide.html', 'guides/remove-pdf-pages-guide.html', 'guides/reorder-pdf-pages-guide.html', 'guides/pdf-to-text-guide.html', 'guides/crop-pdf-guide.html', 'guides/grayscale-pdf-guide.html', 'guides/flatten-pdf-form-guide.html', 'guides/edit-pdf-metadata-guide.html']) {
   assert.ok(fs.existsSync(path), 'Missing file: ' + path);
 }
 assert.equal((html.match(/class="tool-card glass tilt reveal"/g) || []).length, 20, 'Expected all 20 tools to be present in homepage HTML');
@@ -51,6 +51,9 @@ for (const slug of toolSlugsForPages) {
   assert.ok(sitemap.includes('/tools/' + slug + '.html'), 'Tool landing page missing from sitemap: ' + slug);
 }
 assert.ok(sitemap.includes('/guides/merge-pdf-files.html'), 'Guides missing from sitemap');
+for (const guide of ['merge-pdf-files.html', 'split-pdf-pages.html', 'compress-pdf.html', 'pdf-to-jpg.html', 'jpg-to-pdf-guide.html', 'rotate-pdf-guide.html', 'add-page-numbers-guide.html', 'add-watermark-guide.html', 'word-counter-guide.html', 'age-calculator-guide.html', 'image-compressor-guide.html', 'qr-code-guide.html', 'extract-pdf-pages-guide.html', 'remove-pdf-pages-guide.html', 'reorder-pdf-pages-guide.html', 'pdf-to-text-guide.html', 'crop-pdf-guide.html', 'grayscale-pdf-guide.html', 'flatten-pdf-form-guide.html', 'edit-pdf-metadata-guide.html']) {
+  assert.ok(sitemap.includes('/guides/' + guide), 'Guide missing from sitemap: ' + guide);
+}
 assert.ok(sitemap.includes('/about.html') && sitemap.includes('/contact.html'), 'About/contact missing from sitemap');
 
 const dataKeys = Array.from(html.matchAll(/"key":"([^"]+)"/g), m => m[1]);
