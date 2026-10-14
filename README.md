@@ -8,20 +8,28 @@ Responsive, browser-first PDF utilities. Selected files are processed in the bro
 
 https://mureedabbas1.github.io/PDF-ENGINE/
 
-## Tools
+## Tools (20)
 
 - Merge PDF
-- Split PDF by page ranges
-- Rotate PDF pages
-- Add page numbers
-- Add text watermark
-- JPG/PNG to PDF
-- PDF pages to JPG images (downloaded as ZIP)
-- Basic PDF structural optimization (not full image recompression)
-- Word counter
-- Age calculator
-- Image compressor
-- QR code generator
+- Split PDF
+- Compress PDF
+- JPG to PDF
+- PDF to JPG
+- Rotate PDF
+- Add Page Numbers
+- Add Watermark
+- Word Counter
+- Age Calculator
+- Image Compressor
+- QR Code Generator
+- Extract PDF Pages
+- Remove PDF Pages
+- Reorder PDF Pages
+- PDF to Text (text-based PDFs; scanned pages need OCR)
+- Crop PDF (crop box; does not permanently erase hidden content)
+- Grayscale PDF (image-based output)
+- Flatten PDF Forms (supported fillable fields only)
+- Edit PDF Metadata
 
 ## Deploy
 
