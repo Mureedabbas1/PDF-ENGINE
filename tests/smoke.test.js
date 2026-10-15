@@ -6,6 +6,7 @@ const required = [
   ['page title', /<title>PDF Engine/],
   ['responsive viewport', /name="viewport"/],
   ['canonical URL', /rel="canonical"/],
+  ['Google Analytics tag', /G-K1RMFHCTEP/],
   ['Open Graph metadata', /property="og:title"/],
   ['favicon', /rel="icon"/],
   ['PDF merge tool', /TOOLS\.merge\s*=/],
