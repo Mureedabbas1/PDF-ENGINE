@@ -55,6 +55,7 @@ for (const guide of ['merge-pdf-files.html', 'split-pdf-pages.html', 'compress-p
   assert.ok(sitemap.includes('/guides/' + guide), 'Guide missing from sitemap: ' + guide);
 }
 assert.ok(sitemap.includes('/about.html') && sitemap.includes('/contact.html'), 'About/contact missing from sitemap');
+assert.ok(sitemap.includes('/faq.html'), 'FAQ page missing from sitemap');
 
 const dataKeys = Array.from(html.matchAll(/"key":"([^"]+)"/g), m => m[1]);
 const implemented = new Set(Array.from(html.matchAll(/TOOLS\.([A-Za-z0-9_]+)\s*=/g), m => m[1]));
