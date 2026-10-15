@@ -61,4 +61,12 @@ const dataKeys = Array.from(html.matchAll(/"key":"([^"]+)"/g), m => m[1]);
 const implemented = new Set(Array.from(html.matchAll(/TOOLS\.([A-Za-z0-9_]+)\s*=/g), m => m[1]));
 assert.equal(dataKeys.length, 20, 'Expected 20 tool metadata entries');
 for (const key of dataKeys) assert.ok(implemented.has(key), 'Missing implementation for tool: ' + key);
+
+assert.ok(html.includes('https://pdfengine.site/'), 'Homepage canonical must use the custom domain');
+assert.ok(!html.includes('mureedabbas1.github.io/PDF-ENGINE'), 'Homepage must not retain the old canonical domain');
+const sitemapDomainCheck = fs.readFileSync('sitemap.xml', 'utf8');
+assert.ok(sitemapDomainCheck.includes('https://pdfengine.site/'), 'Sitemap must use the custom domain');
+assert.ok(!sitemapDomainCheck.includes('mureedabbas1.github.io/PDF-ENGINE'), 'Sitemap must not retain the old domain');
+assert.ok(fs.readFileSync('robots.txt', 'utf8').includes('https://pdfengine.site/sitemap.xml'), 'robots.txt must reference the custom-domain sitemap');
+
 console.log('PDF Engine static smoke tests passed (' + required.length + ' checks + 20 tool implementation mappings + SEO/legal files).');
