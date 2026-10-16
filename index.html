@@ -10,14 +10,21 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){window.dataLayer.push(arguments);}
   gtag('js', new Date());
-  // Let Google Analytics send the initial page_view automatically.
-  gtag('config', 'G-K1RMFHCTEP');
-  // Track navigation between hash-based tool pages.
+  // Explicitly enable the initial page view and keep URL details accurate.
+  gtag('config', 'G-K1RMFHCTEP', {
+    send_page_view: true,
+    page_title: document.title,
+    page_location: window.location.href,
+    page_path: window.location.pathname + window.location.search + window.location.hash,
+    transport_type: 'beacon'
+  });
+  // This site uses hash-based tool navigation, so report each route change.
   window.addEventListener('hashchange', function(){
     gtag('event', 'page_view', {
       page_title: document.title,
       page_location: window.location.href,
-      page_path: window.location.pathname + window.location.search + window.location.hash
+      page_path: window.location.pathname + window.location.search + window.location.hash,
+      transport_type: 'beacon'
     });
   });
 </script>
