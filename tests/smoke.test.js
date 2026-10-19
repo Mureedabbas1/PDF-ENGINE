@@ -38,7 +38,7 @@ for (const [name, pattern] of required) {
 for (const path of ['robots.txt', 'sitemap.xml', 'privacy.html', 'terms.html', 'about.html', 'contact.html', 'guides/index.html', 'tools/index.html', 'guides/merge-pdf-files.html', 'guides/split-pdf-pages.html', 'guides/compress-pdf.html', 'guides/pdf-to-jpg.html', 'guides/jpg-to-pdf-guide.html', 'guides/rotate-pdf-guide.html', 'guides/add-page-numbers-guide.html', 'guides/add-watermark-guide.html', 'guides/word-counter-guide.html', 'guides/age-calculator-guide.html', 'guides/image-compressor-guide.html', 'guides/qr-code-guide.html', 'guides/extract-pdf-pages-guide.html', 'guides/remove-pdf-pages-guide.html', 'guides/reorder-pdf-pages-guide.html', 'guides/pdf-to-text-guide.html', 'guides/crop-pdf-guide.html', 'guides/grayscale-pdf-guide.html', 'guides/flatten-pdf-form-guide.html', 'guides/edit-pdf-metadata-guide.html']) {
   assert.ok(fs.existsSync(path), 'Missing file: ' + path);
 }
-assert.equal((html.match(/class="tool-card glass tilt reveal"/g) || []).length, 20, 'Expected all 20 tools to be present in homepage HTML');
+assert.equal((html.match(/class="tool-card glass tilt"/g) || []).length, 20, 'Expected all 20 tools to be present in homepage HTML');
 assert.ok(html.includes('href="#/extract-pages"'), 'Extract Pages card must link to its tool route');
 assert.ok(html.includes('href="#/edit-pdf-metadata"'), 'Edit Metadata card must link to its tool route');
 
