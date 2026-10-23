@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 96" role="img" aria-labelledby="title">
+<title id="title">PDF Engine — Free online PDF tools</title>
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#22D3EE"/><stop offset="1" stop-color="#34D399"/></linearGradient></defs>
+<rect x="4" y="8" width="80" height="80" rx="19" fill="url(#g)" stroke="#a7f3d0" stroke-opacity=".7"/>
+<text x="44" y="56" font-family="Arial,sans-serif" font-weight="800" font-size="24" text-anchor="middle" fill="#fff">PDF</text>
+<text x="105" y="48" font-family="Arial,sans-serif" font-size="39" font-weight="800" letter-spacing="-1.2" fill="#effcfb">PDF <tspan fill="#34D399">Engine</tspan></text>
+<text x="108" y="72" font-family="Arial,sans-serif" font-size="12" font-weight="600" letter-spacing=".7" fill="#9ec7cc">FREE ONLINE PDF TOOLS</text>
+</svg>
