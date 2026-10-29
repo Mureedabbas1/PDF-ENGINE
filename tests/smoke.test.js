@@ -39,8 +39,8 @@ for (const path of ['robots.txt', 'sitemap.xml', 'privacy.html', 'terms.html', '
   assert.ok(fs.existsSync(path), 'Missing file: ' + path);
 }
 assert.equal((html.match(/class="tool-card glass tilt"/g) || []).length, 20, 'Expected all 20 tools to be present in homepage HTML');
-assert.ok(html.includes('href="#/extract-pages"'), 'Extract Pages card must link to its tool route');
-assert.ok(html.includes('href="#/edit-pdf-metadata"'), 'Edit Metadata card must link to its tool route');
+assert.ok(html.includes('href="tools/extract-pages.html"'), 'Extract Pages card must link to its tool landing page');
+assert.ok(html.includes('href="tools/edit-pdf-metadata.html"'), 'Edit Metadata card must link to its tool landing page');
 
 assert.ok(!html.includes('contact@example.com'), 'Contact placeholder must be removed');
 assert.ok(!html.includes('aria-label="Advertisement"'), 'Do not show fake ad placeholders before AdSense setup');
