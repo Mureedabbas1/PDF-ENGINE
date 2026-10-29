@@ -43,9 +43,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#070B1A">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%2322D3EE'/%3E%3Cstop offset='1' stop-color='%2334D399'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='url(%23g)'/%3E%3Ctext x='32' y='40' font-family='Arial' font-weight='800' font-size='22' text-anchor='middle' fill='%23fff'%3EPDF%3C/text%3E%3C/svg%3E">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet">
+<!-- Use system fonts to avoid blocking first paint on external font downloads. -->
 <style>
 :root{
   --bg:#070B1A;--bg2:#0e1233;--text:#F8FAFC;--muted:#94A3B8;
@@ -320,6 +318,22 @@ input[type=color]{width:100%;height:44px;border-radius:12px;border:1px solid var
 [data-theme=light] .dd-menu{background:rgba(255,255,255,.97)}
 @media(max-width:560px){.d3{display:none}.scene{margin:20px 0 0}}
 
+
+/* Performance and accessibility refinements */
+:root{font-synthesis:none;text-size-adjust:100%;-webkit-text-size-adjust:100%}
+body{background-attachment:scroll}
+@media(max-width:700px){
+  .hero{padding-top:38px}
+  .scene{height:300px;overflow:hidden}
+  .scene-rot{transform:scale(.78)}
+  .blobs i{filter:blur(48px);animation:none;opacity:.22}
+  .glass{-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+  .tool-card,.t-ico{animation:none}
+  .tool-card{transform:none!important}
+}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+}
 </style>
 <script>try{var t=localStorage.getItem('pe-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "PDF Engine", "url": "https://pdfengine.site/"}</script>
