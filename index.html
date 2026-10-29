@@ -46,13 +46,13 @@
 <!-- Use system fonts to avoid blocking first paint on external font downloads. -->
 <style>
 :root{
-  --bg:#070B1A;--bg2:#0e1233;--text:#F8FAFC;--muted:#94A3B8;
+  --bg:#070B1A;--bg2:#0e1233;--text:#F8FAFC;--muted:#CBD5E1;
   --cyan:#22D3EE;--mint:#34D399;--coral:#FB7185;--amber:#F59E0B;
   --glass:rgba(255,255,255,.07);--glass-b:rgba(255,255,255,.15);--glass-h:rgba(255,255,255,.12);
   --shadow:0 20px 60px rgba(0,0,0,.35);--radius:24px;--maxw:1180px;
 }
 [data-theme=light]{
-  --bg:#E8F1FF;--bg2:#F3EEFF;--text:#0B1226;--muted:#475569;
+  --bg:#E8F1FF;--bg2:#F3EEFF;--text:#0B1226;--muted:#334155;
   --glass:rgba(255,255,255,.6);--glass-b:rgba(255,255,255,.95);--glass-h:rgba(255,255,255,.85);
   --shadow:0 20px 50px rgba(30,60,120,.15);
 }
@@ -319,6 +319,10 @@ input[type=color]{width:100%;height:44px;border-radius:12px;border:1px solid var
 @media(max-width:560px){.d3{display:none}.scene{margin:20px 0 0}}
 
 
+/* Contrast and semantic heading refinements */
+:root{--muted:#CBD5E1}
+[data-theme=light]{--muted:#334155}
+footer h3{font-size:1rem;margin-bottom:12px}
 /* Performance and accessibility refinements */
 :root{font-synthesis:none;text-size-adjust:100%;-webkit-text-size-adjust:100%}
 body{background-attachment:scroll}
@@ -461,9 +465,9 @@ body{background-attachment:scroll}
 <div class="f-grid">
 <div><a class="logo" href="#/"><span class="logo-cube">PDF</span><b>Engine</b></a><p>Every PDF tool. One powerful engine. Free tools that run in your browser, so your files stay private.</p>
 </div>
-<div><h4>PDF Tools</h4><a href="tools/">All Tools Directory</a><a href="#/merge-pdf/">Merge PDF</a><a href="#/split-pdf/">Split PDF</a><a href="#/compress-pdf/">Compress PDF</a><a href="#/jpg-to-pdf/">JPG to PDF</a><a href="#/pdf-to-jpg/">PDF to JPG</a><a href="#/rotate-pdf/">Rotate PDF</a></div>
-<div><h4>More Tools</h4><a href="#/add-page-numbers-to-pdf/">Add Page Numbers</a><a href="#/add-watermark-to-pdf/">Add Watermark</a><a href="#/word-counter/">Word Counter</a><a href="#/age-calculator/">Age Calculator</a><a href="#/image-compressor/">Image Compressor</a><a href="#/qr-code-generator/">QR Code Generator</a></div>
-<div><h4>Company</h4><a href="about.html">About Us</a><a href="faq.html">FAQ</a><a href="contact.html">Contact</a><a href="guides/">Guides &amp; Articles</a><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Service</a></div>
+<div><h3>PDF Tools</h3><a href="tools/">All Tools Directory</a><a href="#/merge-pdf/">Merge PDF</a><a href="#/split-pdf/">Split PDF</a><a href="#/compress-pdf/">Compress PDF</a><a href="#/jpg-to-pdf/">JPG to PDF</a><a href="#/pdf-to-jpg/">PDF to JPG</a><a href="#/rotate-pdf/">Rotate PDF</a></div>
+<div><h3>More Tools</h3><a href="#/add-page-numbers-to-pdf/">Add Page Numbers</a><a href="#/add-watermark-to-pdf/">Add Watermark</a><a href="#/word-counter/">Word Counter</a><a href="#/age-calculator/">Age Calculator</a><a href="#/image-compressor/">Image Compressor</a><a href="#/qr-code-generator/">QR Code Generator</a></div>
+<div><h3>Company</h3><a href="about.html">About Us</a><a href="faq.html">FAQ</a><a href="contact.html">Contact</a><a href="guides/">Guides &amp; Articles</a><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Service</a></div>
 </div>
 <div class="copy">&copy; 2026 PDF Engine. All rights reserved.</div>
 </div></footer>
