@@ -24,8 +24,10 @@ for (const key of expectedImplementations) assert.ok(implemented.has(key), 'Miss
 const slugs = Array.from(html.matchAll(/"slug":"([^"]+)"/g), m => m[1]);
 assert.equal(slugs.length, 19, 'Expected 19 indexable tool entries');
 assert.equal((html.match(/class="tool-card glass tilt"/g) || []).length, 20, 'Expected 20 homepage tool cards');
-assert.ok(html.includes('href="tools/qr-code-generator.html"'));
-assert.ok(sitemap.includes('/tools/qr-code-generator.html'));
+assert.ok(html.includes('href="qr-code-tools.html"'));
+assert.ok(fs.existsSync('qr-code-tools.html'));
+assert.ok((fs.readFileSync('qr-code-tools.html', 'utf8').match(/class="qr-card"/g) || []).length === 30, 'Expected 30 QR tool cards');
+assert.ok(sitemap.includes('/qr-code-tools.html'));
 for (const slug of slugs) {
   assert.ok(fs.existsSync('tools/' + slug + '.html'), 'Missing tool landing page: ' + slug);
   assert.ok(sitemap.includes('/tools/' + slug + '.html'), 'Tool page missing from sitemap: ' + slug);
