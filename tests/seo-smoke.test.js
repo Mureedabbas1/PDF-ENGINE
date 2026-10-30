@@ -33,6 +33,7 @@ for (const file of files) {
   assert.ok(robotsTag && /index,follow/.test(robotsTag), rel + ': robots must allow indexing and following');
   assert.ok(h1, rel + ': missing H1');
   assert.ok(html.includes('adsbygoogle.js?client=' + PUBLISHER), rel + ': missing AdSense loader');
+  assert.ok(html.includes('googletagmanager.com/gtag/js?id=G-K1RMFHCTEP'), rel + ': missing GA4 loader');
   assert.ok(html.includes('name="google-adsense-account" content="' + PUBLISHER + '"'), rel + ': missing AdSense account meta');
   assert.ok(sitemap.includes('<loc>' + canonical + '</loc>'), rel + ': canonical URL missing from sitemap');
   assert.ok(!html.includes('mureedabbas1.github.io/PDF-ENGINE'), rel + ': old GitHub Pages URL remains');
