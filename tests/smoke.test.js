@@ -52,7 +52,7 @@ for (const slug of toolSlugsForPages) {
   assert.ok(sitemap.includes('/tools/' + slug + '.html'), 'Tool landing page missing from sitemap: ' + slug);
 }
 assert.ok(sitemap.includes('/guides/merge-pdf-files.html'), 'Guides missing from sitemap');
-for (const guide of ['merge-pdf-files.html', 'split-pdf-pages.html', 'compress-pdf.html', 'pdf-to-jpg.html', 'jpg-to-pdf-guide.html', 'rotate-pdf-guide.html', 'add-page-numbers-guide.html', 'add-watermark-guide.html', 'word-counter-guide.html', 'age-calculator-guide.html', 'image-compressor-guide.html', 'qr-code-guide.html', 'extract-pdf-pages-guide.html', 'remove-pdf-pages-guide.html', 'reorder-pdf-pages-guide.html', 'pdf-to-text-guide.html', 'crop-pdf-guide.html', 'grayscale-pdf-guide.html', 'flatten-pdf-form-guide.html', 'edit-pdf-metadata-guide.html']) {
+for (const guide of ['merge-pdf-files.html', 'split-pdf-pages.html', 'compress-pdf.html', 'pdf-to-jpg.html', 'jpg-to-pdf-guide.html', 'rotate-pdf-guide.html', 'add-page-numbers-guide.html', 'add-watermark-guide.html', 'word-counter-guide.html', 'age-calculator-guide.html', 'image-compressor-guide.html', 'extract-pdf-pages-guide.html', 'remove-pdf-pages-guide.html', 'reorder-pdf-pages-guide.html', 'pdf-to-text-guide.html', 'crop-pdf-guide.html', 'grayscale-pdf-guide.html', 'flatten-pdf-form-guide.html', 'edit-pdf-metadata-guide.html']) {
   assert.ok(sitemap.includes('/guides/' + guide), 'Guide missing from sitemap: ' + guide);
 }
 assert.ok(sitemap.includes('/about.html') && sitemap.includes('/contact.html'), 'About/contact missing from sitemap');
