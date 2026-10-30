@@ -46,6 +46,6 @@ assert.ok(sitemap.includes('/faq.html'));
 assert.ok(sitemap.includes('/about.html') && sitemap.includes('/contact.html'));
 assert.ok(!sitemap.includes('mureedabbas1.github.io/PDF-ENGINE'));
 assert.ok(robots.includes('Sitemap: https://pdfengine.site/sitemap.xml'));
-assert.ok(fs.readFileSync('ads.txt', 'utf8').includes('google.com, ca-pub-6162822251101594, DIRECT, f08c47fec0942fa0'));
+assert.ok(fs.readFileSync('ads.txt', 'utf8').includes('google.com, pub-6162822251101594, DIRECT, f08c47fec0942fa0'));
 
 console.log('PDF Engine functional and site-structure smoke tests passed (19 tools).');
