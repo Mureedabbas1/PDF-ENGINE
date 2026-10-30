@@ -30,6 +30,10 @@ const qrHub = fs.readFileSync('qr-code-tools.html', 'utf8');
 assert.equal((qrHub.match(/class="qr-card"/g) || []).length, 30, 'Expected 30 QR tool cards');
 assert.ok(!/PDFLEO/i.test(qrHub), 'Old PDFLEO branding remains in QR hub');
 assert.ok(qrHub.includes('"@type":"CollectionPage"'), 'QR hub CollectionPage schema is missing');
+assert.ok(qrHub.includes('googletagmanager.com/gtag/js?id=G-K1RMFHCTEP'), 'QR hub GA4 loader is missing');
+assert.ok(qrHub.includes('adsbygoogle.js?client=ca-pub-6162822251101594'), 'QR hub AdSense loader is missing');
+assert.ok(qrHub.includes('name="google-adsense-account" content="ca-pub-6162822251101594"'), 'QR hub AdSense meta is missing');
+assert.ok(!/PDFLEO/i.test(qrHub), 'Old PDFLEO branding remains in QR hub');
 
 const qrPages = fs.readdirSync('.').filter(name => /^[a-z0-9-]+-qr-generator\.html$/i.test(name));
 assert.equal(qrPages.length, 30, 'Expected 30 standalone QR generator pages in repository');
