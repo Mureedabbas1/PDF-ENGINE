@@ -21,12 +21,12 @@ const seenCanonicals = new Map();
 
 for (const file of files) {
   const html = fs.readFileSync(file, 'utf8');
-  const rel = file.replace(/\\\\/g, '/');
-  const title = (html.match(/<title>([\\s\\S]*?)<\\/title>/i) || [])[1];
-  const description = html.match(/<meta\\s+[^>]*name=["']description["'][^>]*content=["'][^"']+["'][^>]*>/i);
-  const canonical = (html.match(/<link\\s+[^>]*rel=["']canonical["'][^>]*href=["']([^"']+)["'][^>]*>/i) || [])[1];
-  const robotsTag = (html.match(/<meta\\s+[^>]*name=["']robots["'][^>]*content=["']([^"']+)["'][^>]*>/i) || [])[1];
-  const h1 = html.match(/<h1(?:\\s[^>]*)?>[\\s\\S]*?<\\/h1>/i);
+  const rel = file.split(path.sep).join('/');
+  const title = (html.match(/<title>([\s\S]*?)<\/title>/i) || [])[1];
+  const description = html.match(/<meta\s+[^>]*name=["']description["'][^>]*content=["'][^"']+["'][^>]*>/i);
+  const canonical = (html.match(/<link\s+[^>]*rel=["']canonical["'][^>]*href=["']([^"']+)["'][^>]*>/i) || [])[1];
+  const robotsTag = (html.match(/<meta\s+[^>]*name=["']robots["'][^>]*content=["']([^"']+)["'][^>]*>/i) || [])[1];
+  const h1 = html.match(/<h1(?:\s[^>]*)?>[\s\S]*?<\/h1>/i);
   assert.ok(title && title.trim(), rel + ': missing page title');
   assert.ok(description, rel + ': missing meta description');
   assert.ok(canonical && canonical.startsWith(BASE + '/'), rel + ': missing or incorrect canonical URL');
@@ -37,7 +37,7 @@ for (const file of files) {
   assert.ok(sitemap.includes('<loc>' + canonical + '</loc>'), rel + ': canonical URL missing from sitemap');
   assert.ok(!html.includes('mureedabbas1.github.io/PDF-ENGINE'), rel + ': old GitHub Pages URL remains');
 
-  const normalizedTitle = title.replace(/\\s+/g, ' ').trim().toLowerCase();
+  const normalizedTitle = title.replace(/\s+/g, ' ').trim().toLowerCase();
   assert.ok(!seenTitles.has(normalizedTitle), rel + ': duplicate title with ' + seenTitles.get(normalizedTitle));
   seenTitles.set(normalizedTitle, rel);
   assert.ok(!seenCanonicals.has(canonical), rel + ': duplicate canonical with ' + seenCanonicals.get(canonical));
