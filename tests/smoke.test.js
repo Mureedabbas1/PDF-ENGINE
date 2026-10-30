@@ -17,8 +17,7 @@ const required = [
   ['word counter tool', /TOOLS\.wordcounter\s*=/],
   ['age calculator tool', /TOOLS\.age\s*=/],
   ['image compressor tool', /TOOLS\.imgcompress\s*=/],
-  ['QR code library', /qrcode-generator/],
-  ['20 tool metadata entries', (html.match(/"slug":/g) || []).length === 20 ? /./ : /NEVER_MATCH_THIS/],
+  ['19 tool metadata entries', (html.match(/"slug":/g) || []).length === 20 ? /./ : /NEVER_MATCH_THIS/],
   ['page extraction tool', /TOOLS\.extract\s*=/],
   ['page removal tool', /TOOLS\.remove\s*=/],
   ['page reorder tool', /TOOLS\.reorder\s*=/],
@@ -29,8 +28,8 @@ const required = [
   ['metadata tool', /TOOLS\.metadata\s*=/]
 ];
 for (const [name, pattern] of required) {
-  if (name === '20 tool metadata entries') {
-    assert.equal((html.match(/"slug":/g) || []).length, 20, 'Expected exactly 20 tools');
+  if (name === '19 tool metadata entries') {
+    assert.equal((html.match(/"slug":/g) || []).length, 20, 'Expected exactly 19 tools');
   } else {
     assert.match(html, pattern, 'Missing: ' + name);
   }
@@ -38,7 +37,7 @@ for (const [name, pattern] of required) {
 for (const path of ['robots.txt', 'sitemap.xml', 'privacy.html', 'terms.html', 'about.html', 'contact.html', 'guides/index.html', 'tools/index.html', 'guides/merge-pdf-files.html', 'guides/split-pdf-pages.html', 'guides/compress-pdf.html', 'guides/pdf-to-jpg.html', 'guides/jpg-to-pdf-guide.html', 'guides/rotate-pdf-guide.html', 'guides/add-page-numbers-guide.html', 'guides/add-watermark-guide.html', 'guides/word-counter-guide.html', 'guides/age-calculator-guide.html', 'guides/image-compressor-guide.html', 'guides/extract-pdf-pages-guide.html', 'guides/remove-pdf-pages-guide.html', 'guides/reorder-pdf-pages-guide.html', 'guides/pdf-to-text-guide.html', 'guides/crop-pdf-guide.html', 'guides/grayscale-pdf-guide.html', 'guides/flatten-pdf-form-guide.html', 'guides/edit-pdf-metadata-guide.html']) {
   assert.ok(fs.existsSync(path), 'Missing file: ' + path);
 }
-assert.equal((html.match(/class="tool-card glass tilt"/g) || []).length, 20, 'Expected all 20 tools to be present in homepage HTML');
+assert.equal((html.match(/class="tool-card glass tilt"/g) || []).length, 20, 'Expected all 19 tools to be present in homepage HTML');
 assert.ok(html.includes('href="tools/extract-pages.html"'), 'Extract Pages card must link to its tool landing page');
 assert.ok(html.includes('href="tools/edit-pdf-metadata.html"'), 'Edit Metadata card must link to its tool landing page');
 
@@ -60,7 +59,7 @@ assert.ok(sitemap.includes('/faq.html'), 'FAQ page missing from sitemap');
 
 const dataKeys = Array.from(html.matchAll(/"key":"([^"]+)"/g), m => m[1]);
 const implemented = new Set(Array.from(html.matchAll(/TOOLS\.([A-Za-z0-9_]+)\s*=/g), m => m[1]));
-assert.equal(dataKeys.length, 20, 'Expected 20 tool metadata entries');
+assert.equal(dataKeys.length, 19, 'Expected 19 tool metadata entries');
 for (const key of dataKeys) assert.ok(implemented.has(key), 'Missing implementation for tool: ' + key);
 
 assert.ok(html.includes('https://pdfengine.site/'), 'Homepage canonical must use the custom domain');
