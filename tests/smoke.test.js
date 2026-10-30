@@ -23,7 +23,9 @@ for (const key of expectedImplementations) assert.ok(implemented.has(key), 'Miss
 
 const slugs = Array.from(html.matchAll(/"slug":"([^"]+)"/g), m => m[1]);
 assert.equal(slugs.length, 19, 'Expected 19 indexable tool entries');
-assert.equal((html.match(/class="tool-card glass tilt"/g) || []).length, 19, 'Expected 19 homepage tool cards');
+assert.equal((html.match(/class="tool-card glass tilt"/g) || []).length, 20, 'Expected 20 homepage tool cards');
+assert.ok(html.includes('href="tools/qr-code-generator.html"'));
+assert.ok(sitemap.includes('/tools/qr-code-generator.html'));
 for (const slug of slugs) {
   assert.ok(fs.existsSync('tools/' + slug + '.html'), 'Missing tool landing page: ' + slug);
   assert.ok(sitemap.includes('/tools/' + slug + '.html'), 'Tool page missing from sitemap: ' + slug);
@@ -48,4 +50,4 @@ assert.ok(!sitemap.includes('mureedabbas1.github.io/PDF-ENGINE'));
 assert.ok(robots.includes('Sitemap: https://pdfengine.site/sitemap.xml'));
 assert.ok(fs.readFileSync('ads.txt', 'utf8').includes('google.com, pub-6162822251101594, DIRECT, f08c47fec0942fa0'));
 
-console.log('PDF Engine functional and site-structure smoke tests passed (19 tools).');
+console.log('PDF Engine functional and site-structure smoke tests passed (20 homepage tools; 19 engine-integrated tools).');
