@@ -32,7 +32,7 @@ assert.ok(!/PDFLEO/i.test(qrHub), 'Old PDFLEO branding remains in QR hub');
 assert.ok(qrHub.includes('"@type":"CollectionPage"'), 'QR hub CollectionPage schema is missing');
 
 const qrPages = fs.readdirSync('.').filter(name => /^[a-z0-9-]+-qr-generator\.html$/i.test(name));
-assert.equal(qrPages.length, 31, 'Expected 31 standalone QR generator pages in repository');
+assert.equal(qrPages.length, 30, 'Expected 30 standalone QR generator pages in repository');
 for (const page of qrPages) {
   const content = fs.readFileSync(page, 'utf8');
   assert.match(content, /<title[^>]*>\s*.+<\/title>/i, page + ': missing title');
