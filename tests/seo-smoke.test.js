@@ -46,6 +46,6 @@ for (const file of files) {
 
 assert.ok(robots.includes('Sitemap: ' + BASE + '/sitemap.xml'), 'robots.txt must reference the custom-domain sitemap');
 assert.ok(sitemap.includes('<loc>' + BASE + '/</loc>'), 'Sitemap must include homepage');
-assert.ok(fs.readFileSync('ads.txt', 'utf8').includes('google.com, ' + PUBLISHER + ', DIRECT, f08c47fec0942fa0'), 'ads.txt publisher record is missing or incorrect');
+assert.ok(fs.readFileSync('ads.txt', 'utf8').includes('google.com, pub-6162822251101594, DIRECT, f08c47fec0942fa0'), 'ads.txt publisher record is missing or incorrect');
 
 console.log('PDF Engine SEO smoke tests passed: ' + files.length + ' tool/guide pages checked for titles, descriptions, canonicals, robots, H1, sitemap and AdSense.');
