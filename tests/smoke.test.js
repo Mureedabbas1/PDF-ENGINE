@@ -9,6 +9,8 @@ assert.match(html, /<title>PDF Engine/);
 assert.match(html, /name="viewport"/);
 assert.match(html, /rel="canonical"/);
 assert.match(html, /G-K1RMFHCTEP/);
+assert.ok(html.includes('adsbygoogle.js?client=ca-pub-6162822251101594'), 'Homepage AdSense loader is missing');
+assert.ok(html.includes('name="google-adsense-account" content="ca-pub-6162822251101594"'), 'Homepage AdSense account meta is missing');
 assert.match(html, /property="og:title"/);
 assert.match(html, /rel="icon"/);
 
