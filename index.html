@@ -338,6 +338,40 @@ body{background-attachment:scroll}
 @media(prefers-reduced-motion:reduce){
   *,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
 }
+
+/* ===== iLovePDF-style homepage (theme + animations unchanged) ===== */
+.hero{padding:44px 0 18px}
+.hero h1{font-size:clamp(2.1rem,4.8vw,3.6rem)}
+.hero p.lead{margin-bottom:22px}
+.scene{height:340px}
+.trust{padding:14px 0 0}
+.tools-sec{padding:26px 0 40px}
+.cat-tabs{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin:0 0 28px}
+.cat-tab{padding:10px 20px;border-radius:99px;border:1px solid var(--glass-b);background:var(--glass);color:var(--muted);font:600 .95rem Outfit,system-ui,sans-serif;cursor:pointer;-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);transition:.2s}
+.cat-tab:hover{color:var(--text);background:var(--glass-h);transform:translateY(-2px)}
+.cat-tab.active{color:#04202a;background:linear-gradient(90deg,var(--cyan),var(--mint));border-color:transparent;box-shadow:0 8px 24px rgba(34,211,238,.35)}
+.cat-tab:focus-visible{outline:2px solid var(--cyan);outline-offset:3px}
+.ilp-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.ilp-grid .tool-card{min-height:190px;padding:22px}
+.ilp-grid .tool-card.is-hidden{display:none!important}
+.ilp-grid .tool-card p{font-size:.9rem}
+.ilp-grid .tool-card[data-cat=optimize] .t-ico{background:linear-gradient(135deg,rgba(52,211,153,.34),rgba(34,211,238,.16))}
+.ilp-grid .tool-card[data-cat=convert] .t-ico{background:linear-gradient(135deg,rgba(245,158,11,.34),rgba(251,113,133,.18))}
+.ilp-grid .tool-card[data-cat=edit] .t-ico{background:linear-gradient(135deg,rgba(251,113,133,.34),rgba(245,158,11,.18))}
+.ilp-grid .tool-card[data-cat=more] .t-ico{background:linear-gradient(135deg,rgba(129,140,248,.34),rgba(34,211,238,.18))}
+@media(max-width:1020px){.ilp-grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:760px){.ilp-grid{grid-template-columns:repeat(2,1fr);gap:14px}.ilp-grid .tool-card{min-height:170px;padding:18px}.cat-tabs{flex-wrap:nowrap;justify-content:flex-start;overflow-x:auto;padding-bottom:6px;scrollbar-width:none}.cat-tabs::-webkit-scrollbar{display:none}.cat-tab{flex:none}}
+@media(max-width:340px){.ilp-grid{grid-template-columns:1fr}}
+/* Footer: tools by category */
+.f-grid.f-tools{grid-template-columns:1.5fr repeat(6,1fr);gap:24px}
+.f-tools h3{font-size:.8rem;letter-spacing:.09em;text-transform:uppercase;color:var(--text)}
+.f-tools a{font-size:.88rem}
+.f-tools .f-brand p{max-width:240px}
+.f-grid.f-tools .f-brand a.logo{display:flex;padding:0}
+.f-bottom{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
+.f-bottom a{color:var(--cyan)}
+@media(max-width:1100px){.f-grid.f-tools{grid-template-columns:repeat(3,1fr)}.f-tools .f-brand{grid-column:1/-1}}
+@media(max-width:560px){.f-grid.f-tools{grid-template-columns:repeat(2,1fr)}.f-bottom{justify-content:center;text-align:center}}
 </style>
 <script>try{var t=localStorage.getItem('pe-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "PDF Engine", "url": "https://pdfengine.site/", "logo": "https://pdfengine.site/og-image.png"}</script>
@@ -391,8 +425,8 @@ body{background-attachment:scroll}
 <section class="hero"><div class="container hero-grid">
 <div>
 <span class="eyebrow glass">&#9889; 20 free tools &middot; No sign-up &middot; Browser-based processing</span>
-<h1><span class="grad-text">All-in-One PDF Tools.</span> Fast. Free. Private.</h1>
-<p class="lead">Use free PDF tools to merge, split, compress and convert documents in your browser. Browser-based tools with practical guidance.</p>
+<h1><span class="grad-text">Every PDF tool you need,</span> in one place.</h1>
+<p class="lead">All-in-One PDF Tools. Fast. Free. Private. Merge, split, compress, convert, rotate and watermark PDFs right in your browser, with no sign-up.</p>
 <p class="muted" style="font-size:.92rem;margin-top:-18px;margin-bottom:22px;max-width:560px">PDF Engine is an online service used directly in your browser, not downloadable desktop software. Files you download are document, image, or other tool-result outputs—not software installers.</p>
 <div class="hero-cta"><a class="btn btn-primary" href="#tools">Explore Tools</a><a class="btn btn-glass" href="tools/merge-pdf.html">Merge PDF Now</a></div>
 </div>
@@ -404,62 +438,41 @@ body{background-attachment:scroll}
 </div></div>
 </div></section>
 <div class="container"><div class="trust"><span class="glass">&#10003; 100% Free</span><span class="glass">&#10003; No Sign-up</span><span class="glass">&#128274; Files never leave your device</span><span class="glass">&#9889; Lightning Fast</span></div></div>
-<section id="qr-code" style="padding:28px 0 12px">
-<div class="container">
-<div class="cta glass" style="display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;padding:26px;border:1px solid var(--glass-b);border-radius:22px">
-<div style="flex:1;min-width:240px"><span class="eyebrow">NEW FREE TOOL</span><h2 style="margin:8px 0">Explore <span class="grad-text">30 QR Tools</span></h2><p style="margin:0;color:var(--muted)">Turn any website link or text into a QR image. No sign-up. Download as PNG.</p></div>
-<a class="btn btn-primary" href="qr-code-tools.html">▦ Open 30 QR Code Tools →</a>
-</div>
-</div>
-</section>
-<section id="tools"><div class="container">
-<div class="sec-head reveal"><h2>Every tool you need, <span class="grad-text">in one engine</span></h2><p>Pick a tool, drop your file and get the result in seconds.</p></div>
-
-<div class="tool-carousel-group reveal">
-  <div class="carousel-heading"><div><h3>Convert PDF</h3><p>Convert documents and images with ease.</p></div><div class="carousel-controls"><button class="carousel-btn" type="button" aria-label="Scroll Convert PDF tools left" data-carousel-dir="-1" data-carousel-target="convert-carousel">‹</button><button class="carousel-btn" type="button" aria-label="Scroll Convert PDF tools right" data-carousel-dir="1" data-carousel-target="convert-carousel">›</button></div></div>
-  <div class="tool-carousel-track" id="convert-carousel" aria-label="Convert PDF tools">
-    <a class="tool-card glass tilt" href="tools/jpg-to-pdf.html"><div class="t-ico">🖼️</div><h3>JPG to PDF</h3><p>Turn JPG, PNG and WebP images into one PDF document.</p></a>
-    <a class="tool-card glass tilt" href="tools/pdf-to-jpg.html"><div class="t-ico">📸</div><h3>PDF to JPG</h3><p>Convert every PDF page into a high quality JPG image.</p></a>
-    <a class="tool-card glass tilt" href="tools/pdf-to-text.html"><div class="t-ico">📝</div><h3>PDF to Text</h3><p>Save selectable PDF text as a TXT file.</p></a>
-    <a class="tool-card glass tilt" href="tools/word-counter.html"><div class="t-ico">📝</div><h3>Word Counter</h3><p>Count words, characters, sentences and reading time instantly.</p></a>
-    
-  </div>
-</div>
-
-<div class="tool-carousel-group reveal">
-  <div class="carousel-heading"><div><h3>Organize PDF</h3><p>Arrange, split and manage PDF pages.</p></div><div class="carousel-controls"><button class="carousel-btn" type="button" aria-label="Scroll Organize PDF tools left" data-carousel-dir="-1" data-carousel-target="organize-carousel">‹</button><button class="carousel-btn" type="button" aria-label="Scroll Organize PDF tools right" data-carousel-dir="1" data-carousel-target="organize-carousel">›</button></div></div>
-  <div class="tool-carousel-track" id="organize-carousel" aria-label="Organize PDF tools">
-    <a class="tool-card glass tilt" href="tools/merge-pdf.html"><div class="t-ico">📎</div><h3>Merge PDF</h3><p>Combine many PDF files into one document in the order you want.</p></a>
-    <a class="tool-card glass tilt" href="tools/split-pdf.html"><div class="t-ico">✂️</div><h3>Split PDF</h3><p>Extract chosen pages or split every page into its own PDF.</p></a>
-    <a class="tool-card glass tilt" href="tools/extract-pages.html"><div class="t-ico">📄</div><h3>Extract Pages</h3><p>Save selected pages as a new PDF.</p></a>
-    <a class="tool-card glass tilt" href="tools/remove-pdf-pages.html"><div class="t-ico">🗑️</div><h3>Remove Pages</h3><p>Delete unwanted pages from a PDF.</p></a>
-    <a class="tool-card glass tilt" href="tools/reorder-pdf-pages.html"><div class="t-ico">↕️</div><h3>Reorder Pages</h3><p>Change the order of pages in a PDF.</p></a>
-  </div>
-</div>
-
-<div class="tool-carousel-group reveal">
-  <div class="carousel-heading"><div><h3>Optimize PDF</h3><p>Improve file size, appearance and output.</p></div><div class="carousel-controls"><button class="carousel-btn" type="button" aria-label="Scroll Optimize PDF tools left" data-carousel-dir="-1" data-carousel-target="optimize-carousel">‹</button><button class="carousel-btn" type="button" aria-label="Scroll Optimize PDF tools right" data-carousel-dir="1" data-carousel-target="optimize-carousel">›</button></div></div>
-  <div class="tool-carousel-track" id="optimize-carousel" aria-label="Optimize PDF tools">
-    <a class="tool-card glass tilt" href="tools/compress-pdf.html"><div class="t-ico">🗜️</div><h3>Compress PDF</h3><p>Reduce PDF file size so it is easy to email and upload.</p></a>
-    <a class="tool-card glass tilt" href="tools/image-compressor.html"><div class="t-ico">🗃️</div><h3>Image Compressor</h3><p>Shrink JPG, PNG and WebP images without visible quality loss.</p></a>
-    <a class="tool-card glass tilt" href="tools/crop-pdf.html"><div class="t-ico">✂️</div><h3>Crop PDF</h3><p>Trim visible margins around PDF pages.</p></a>
-    <a class="tool-card glass tilt" href="tools/grayscale-pdf.html"><div class="t-ico">⚫</div><h3>Grayscale PDF</h3><p>Create a black-and-white PDF for printing.</p></a>
-    <a class="tool-card glass tilt" href="tools/flatten-pdf-form.html"><div class="t-ico">📋</div><h3>Flatten PDF Form</h3><p>Make supported fillable form fields non-interactive.</p></a>
-  </div>
-</div>
-
-<div class="tool-carousel-group reveal">
-  <div class="carousel-heading"><div><h3>Security &amp; Other Tools</h3><p>Rotate, label, watermark and handle everyday tasks.</p></div><div class="carousel-controls"><button class="carousel-btn" type="button" aria-label="Scroll Security and Other tools left" data-carousel-dir="-1" data-carousel-target="security-carousel">‹</button><button class="carousel-btn" type="button" aria-label="Scroll Security and Other tools right" data-carousel-dir="1" data-carousel-target="security-carousel">›</button></div></div>
-  <div class="tool-carousel-track" id="security-carousel" aria-label="Security and other tools">
-    <a class="tool-card glass tilt" href="tools/rotate-pdf.html"><div class="t-ico">🔄</div><h3>Rotate PDF</h3><p>Rotate all pages or only selected pages of a PDF.</p></a>
-    <a class="tool-card glass tilt" href="tools/add-page-numbers-to-pdf.html"><div class="t-ico">🔢</div><h3>Add Page Numbers</h3><p>Add clean page numbers to any PDF in the position you like.</p></a>
-    <a class="tool-card glass tilt" href="tools/add-watermark-to-pdf.html"><div class="t-ico">💧</div><h3>Add Watermark</h3><p>Stamp a text watermark such as CONFIDENTIAL on every page.</p></a>
-    <a class="tool-card glass tilt" href="tools/age-calculator.html"><div class="t-ico">🎂</div><h3>Age Calculator</h3><p>Find your exact age in years, months, days and hours.</p></a>
-    <a class="tool-card glass tilt" href="tools/edit-pdf-metadata.html"><div class="t-ico">🏷️</div><h3>Edit PDF Metadata</h3><p>Update title, author, subject and keywords.</p></a>
-    <a class="tool-card glass tilt" href="qr-code-tools.html"><div class="t-ico">▦</div><h3>30 QR Code Tools</h3><p>Create and download QR codes for links and text.</p></a>
-  </div>
+<section id="tools" class="tools-sec"><div class="container">
+<div class="cat-tabs reveal" role="tablist" aria-label="Filter tools by category"><button class="cat-tab active" type="button" role="tab" aria-selected="true" data-filter="all">All</button><button class="cat-tab" type="button" role="tab" aria-selected="false" data-filter="organize">Organize PDF</button><button class="cat-tab" type="button" role="tab" aria-selected="false" data-filter="optimize">Optimize PDF</button><button class="cat-tab" type="button" role="tab" aria-selected="false" data-filter="convert">Convert PDF</button><button class="cat-tab" type="button" role="tab" aria-selected="false" data-filter="edit">Edit PDF</button><button class="cat-tab" type="button" role="tab" aria-selected="false" data-filter="more">More Tools</button></div>
+<div class="ilp-grid reveal" id="tool-grid">
+    <a class="tool-card glass tilt" data-cat="organize" href="tools/merge-pdf.html"><div class="t-ico">📎</div><h3>Merge PDF</h3><p>Combine many PDF files into one document in the order you want.</p></a>
+    <a class="tool-card glass tilt" data-cat="organize" href="tools/split-pdf.html"><div class="t-ico">✂️</div><h3>Split PDF</h3><p>Extract chosen pages or split every page into its own PDF.</p></a>
+    <a class="tool-card glass tilt" data-cat="organize" href="tools/extract-pages.html"><div class="t-ico">📄</div><h3>Extract Pages</h3><p>Save selected pages as a new PDF.</p></a>
+    <a class="tool-card glass tilt" data-cat="organize" href="tools/remove-pdf-pages.html"><div class="t-ico">🗑️</div><h3>Remove Pages</h3><p>Delete unwanted pages from a PDF.</p></a>
+    <a class="tool-card glass tilt" data-cat="organize" href="tools/reorder-pdf-pages.html"><div class="t-ico">↕️</div><h3>Reorder Pages</h3><p>Change the order of pages in a PDF.</p></a>
+    <a class="tool-card glass tilt" data-cat="optimize" href="tools/compress-pdf.html"><div class="t-ico">🗜️</div><h3>Compress PDF</h3><p>Reduce PDF file size so it is easy to email and upload.</p></a>
+    <a class="tool-card glass tilt" data-cat="optimize" href="tools/crop-pdf.html"><div class="t-ico">✂️</div><h3>Crop PDF</h3><p>Trim visible margins around PDF pages.</p></a>
+    <a class="tool-card glass tilt" data-cat="optimize" href="tools/grayscale-pdf.html"><div class="t-ico">⚫</div><h3>Grayscale PDF</h3><p>Create a black-and-white PDF for printing.</p></a>
+    <a class="tool-card glass tilt" data-cat="optimize" href="tools/flatten-pdf-form.html"><div class="t-ico">📋</div><h3>Flatten PDF Form</h3><p>Make supported fillable form fields non-interactive.</p></a>
+    <a class="tool-card glass tilt" data-cat="convert" href="tools/jpg-to-pdf.html"><div class="t-ico">🖼️</div><h3>JPG to PDF</h3><p>Turn JPG, PNG and WebP images into one PDF document.</p></a>
+    <a class="tool-card glass tilt" data-cat="convert" href="tools/pdf-to-jpg.html"><div class="t-ico">📸</div><h3>PDF to JPG</h3><p>Convert every PDF page into a high quality JPG image.</p></a>
+    <a class="tool-card glass tilt" data-cat="convert" href="tools/pdf-to-text.html"><div class="t-ico">📝</div><h3>PDF to Text</h3><p>Save selectable PDF text as a TXT file.</p></a>
+    <a class="tool-card glass tilt" data-cat="edit" href="tools/rotate-pdf.html"><div class="t-ico">🔄</div><h3>Rotate PDF</h3><p>Rotate all pages or only selected pages of a PDF.</p></a>
+    <a class="tool-card glass tilt" data-cat="edit" href="tools/add-page-numbers-to-pdf.html"><div class="t-ico">🔢</div><h3>Add Page Numbers</h3><p>Add clean page numbers to any PDF in the position you like.</p></a>
+    <a class="tool-card glass tilt" data-cat="edit" href="tools/add-watermark-to-pdf.html"><div class="t-ico">💧</div><h3>Add Watermark</h3><p>Stamp a text watermark such as CONFIDENTIAL on every page.</p></a>
+    <a class="tool-card glass tilt" data-cat="edit" href="tools/edit-pdf-metadata.html"><div class="t-ico">🏷️</div><h3>Edit PDF Metadata</h3><p>Update title, author, subject and keywords.</p></a>
+    <a class="tool-card glass tilt" data-cat="more" href="tools/image-compressor.html"><div class="t-ico">🗃️</div><h3>Image Compressor</h3><p>Shrink JPG, PNG and WebP images without visible quality loss.</p></a>
+    <a class="tool-card glass tilt" data-cat="more" href="tools/word-counter.html"><div class="t-ico">📝</div><h3>Word Counter</h3><p>Count words, characters, sentences and reading time instantly.</p></a>
+    <a class="tool-card glass tilt" data-cat="more" href="tools/age-calculator.html"><div class="t-ico">🎂</div><h3>Age Calculator</h3><p>Find your exact age in years, months, days and hours.</p></a>
+    <a class="tool-card glass tilt" data-cat="more" href="qr-code-tools.html"><div class="t-ico">▦</div><h3>30 QR Code Tools</h3><p>Create and download QR codes for links and text.</p></a>
 </div>
 </div></section>
+<script>
+(function(){
+  var tabs=document.querySelectorAll('.cat-tab'),cards=document.querySelectorAll('#tool-grid .tool-card');
+  tabs.forEach(function(t){t.addEventListener('click',function(){
+    var f=t.getAttribute('data-filter');
+    tabs.forEach(function(x){var on=x===t;x.classList.toggle('active',on);x.setAttribute('aria-selected',on?'true':'false');});
+    cards.forEach(function(c){c.classList.toggle('is-hidden',f!=='all'&&c.getAttribute('data-cat')!==f);});
+  });});
+})();
+</script>
 
 <section id="guides"><div class="container"><div class="sec-head reveal"><h2>PDF guides &amp; practical tips</h2><p>Clear, original guides to help you choose the right PDF workflow and avoid common file problems.</p></div><div class="features"><a class="feat glass" href="guides/merge-pdf-files.html"><div class="fi">📎</div><h3>How to Merge PDF Files</h3><p>Combine documents in the right order and keep a clean final copy.</p></a><a class="feat glass" href="guides/split-pdf-pages.html"><div class="fi">✂️</div><h3>How to Split PDF Pages</h3><p>Extract only the pages you need and check the output before sharing.</p></a><a class="feat glass" href="guides/compress-pdf.html"><div class="fi">🗜️</div><h3>How to Compress a PDF</h3><p>Understand image-based compression, trade-offs and file-size checks.</p></a><a class="feat glass" href="guides/pdf-to-jpg.html"><div class="fi">🖼️</div><h3>Convert PDF to JPG</h3><p>Choose image quality and organize exported pages for sharing.</p></a></div><p style="text-align:center;margin-top:24px"><a class="btn btn-glass" href="guides/">View all guides</a></p></div></section><section><div class="container"><div class="sec-head reveal"><h2>How it works</h2><p>Three simple steps. No account required.</p></div>
 <div class="steps">
@@ -493,16 +506,17 @@ body{background-attachment:scroll}
 
 
 <footer><div class="container">
-<div class="f-grid">
-<div><a class="logo" href="/"><span class="logo-cube">PDF</span><b>Engine</b></a><p>Every PDF tool. One powerful engine. Free tools that run in your browser, so your files stay private.</p>
+<div class="f-grid f-tools">
+<div class="f-brand"><a class="logo" href="/"><span class="logo-cube">PDF</span><b>Engine</b></a><p>Every PDF tool. One powerful engine. Free tools that run in your browser, so your files stay private.</p></div>
+<div><h3>Organize PDF</h3><a href="tools/merge-pdf.html">Merge PDF</a><a href="tools/split-pdf.html">Split PDF</a><a href="tools/extract-pages.html">Extract Pages</a><a href="tools/remove-pdf-pages.html">Remove Pages</a><a href="tools/reorder-pdf-pages.html">Reorder Pages</a></div>
+<div><h3>Optimize PDF</h3><a href="tools/compress-pdf.html">Compress PDF</a><a href="tools/crop-pdf.html">Crop PDF</a><a href="tools/grayscale-pdf.html">Grayscale PDF</a><a href="tools/flatten-pdf-form.html">Flatten PDF Form</a></div>
+<div><h3>Convert PDF</h3><a href="tools/jpg-to-pdf.html">JPG to PDF</a><a href="tools/pdf-to-jpg.html">PDF to JPG</a><a href="tools/pdf-to-text.html">PDF to Text</a></div>
+<div><h3>Edit PDF</h3><a href="tools/rotate-pdf.html">Rotate PDF</a><a href="tools/add-page-numbers-to-pdf.html">Add Page Numbers</a><a href="tools/add-watermark-to-pdf.html">Add Watermark</a><a href="tools/edit-pdf-metadata.html">Edit PDF Metadata</a></div>
+<div><h3>More Tools</h3><a href="tools/image-compressor.html">Image Compressor</a><a href="tools/word-counter.html">Word Counter</a><a href="tools/age-calculator.html">Age Calculator</a><a href="qr-code-tools.html">30 QR Code Tools</a></div>
+<div><h3>Company</h3><a href="tools/">All Tools</a><a href="about.html">About Us</a><a href="faq.html">FAQ</a><a href="contact.html">Contact</a><a href="guides/">Guides &amp; Articles</a><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Service</a></div>
 </div>
-<div><h3>PDF Tools</h3><a href="tools/">All Tools Directory</a><a href="tools/merge-pdf.html">Merge PDF</a><a href="tools/split-pdf.html">Split PDF</a><a href="tools/compress-pdf.html">Compress PDF</a><a href="tools/jpg-to-pdf.html">JPG to PDF</a><a href="tools/pdf-to-jpg.html">PDF to JPG</a><a href="tools/rotate-pdf.html">Rotate PDF</a></div>
-<div><h3>More Tools</h3><a href="tools/add-page-numbers-to-pdf.html">Add Page Numbers</a><a href="tools/add-watermark-to-pdf.html">Add Watermark</a><a href="tools/word-counter.html">Word Counter</a><a href="tools/age-calculator.html">Age Calculator</a><a href="tools/image-compressor.html">Image Compressor</a><a href="qr-code-tools.html">30 QR Code Tools</a></div>
-<div><h3>Company</h3><a href="about.html">About Us</a><a href="faq.html">FAQ</a><a href="contact.html">Contact</a><a href="guides/">Guides &amp; Articles</a><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Service</a></div>
-</div>
-<div class="copy">&copy; 2026 PDF Engine. All rights reserved.</div>
-</div><p class="footer-support">Support: <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=support@pdfengine.site">support@pdfengine.site</a></p>
-</footer>
+<div class="copy f-bottom"><span>&copy; 2026 PDF Engine. All rights reserved.</span><span class="footer-support">Support: <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=support@pdfengine.site">support@pdfengine.site</a></span></div>
+</div></footer>
 <script>
 (function () {
   var root = document.documentElement;
