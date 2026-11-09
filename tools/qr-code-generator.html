@@ -33,6 +33,14 @@ footer{border-top:1px solid var(--line);padding:24px 0;color:var(--muted);font-s
 <div><div class="preview" id="qr-output"><div class="placeholder">Your QR code will appear here</div></div><button class="btn" id="download" type="button" disabled style="width:100%;margin-top:14px">Download PNG</button></div>
 </section>
 <div class="notes"><article class="note"><b>🔒 Private</b><p>Your entered content stays in your browser while the QR code is created.</p></article><article class="note"><b>⚡ Instant</b><p>Create a QR code in seconds without creating an account.</p></article><article class="note"><b>📥 Easy download</b><p>Save your QR code as a PNG image and use it anywhere.</p></article></div>
+<section class="panel" aria-labelledby="qr-practical-guide" style="margin:24px 0 38px;line-height:1.7">
+<h2 id="qr-practical-guide">Create a QR code that scans reliably</h2>
+<p><strong>Use a complete web address.</strong> For a website, include <code>https://</code> so a phone can recognise the content as a link. You can also encode plain text or an email address; check the exact text before generating the image.</p>
+<p><strong>Keep the data concise.</strong> This tool accepts up to 2,000 characters. Longer content creates a denser QR pattern, which can be harder for some cameras to read, especially when printed small.</p>
+<p><strong>Test the downloaded PNG.</strong> Scan it with more than one phone if it will be printed for customers. Keep a strong dark-on-light contrast, leave a clear margin around the code and avoid stretching the image until its squares become blurred.</p>
+<p><strong>Know what a static QR code does.</strong> The code stores the information you entered; it does not provide an editable redirect. If a destination changes, create and distribute a new QR image. A QR code is not encryption, so do not encode passwords or confidential information.</p>
+<p>The QR image is generated in your browser. The page loads its QR-generation library from a third-party CDN, but this tool does not send the entered text to a PDF Engine upload endpoint.</p>
+</section>
 </main>
 <footer><div class="wrap">© 2026 PDF Engine · <a href="/privacy.html">Privacy</a> · <a href="/contact.html">Contact</a></div></footer>
 <script>
