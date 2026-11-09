@@ -1,0 +1,53 @@
+/* PDF Engine - shared mobile polish (linked last on every page) */
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+img,video,canvas,svg{max-width:100%}
+table{max-width:100%}
+
+/* ---------- Phones ---------- */
+@media (max-width:640px){
+  /* 16px stops iPhone Safari zooming in when a field is tapped */
+  input:not([type=checkbox]):not([type=radio]):not([type=range]):not([type=file]),select,textarea{font-size:16px!important}
+
+  /* Inner pages (about, faq, contact, guides): header nav as one swipeable row */
+  header:not([class]){padding:12px 16px 0;gap:4px}
+  header:not([class]) nav{width:100%;flex-wrap:nowrap;overflow-x:auto;gap:6px;padding:2px 0 12px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  header:not([class]) nav::-webkit-scrollbar{display:none}
+  header:not([class]) nav a{flex:none;display:inline-flex;align-items:center;min-height:44px;padding:0 14px;border:1px solid #34415a;border-radius:999px;font-size:.95rem;text-decoration:none;white-space:nowrap}
+  header:not([class]) .brand{display:inline-flex;align-items:center;min-height:44px}
+
+  /* Tool pages (tools/*.html): same idea for their top nav */
+  main.wrap>nav.nav{display:flex;flex-wrap:nowrap;align-items:center;gap:8px;overflow-x:auto;padding:2px 0 12px;scrollbar-width:none}
+  main.wrap>nav.nav::-webkit-scrollbar{display:none}
+  main.wrap>nav.nav a{flex:none;display:inline-flex;align-items:center;min-height:44px;white-space:nowrap}
+  main.wrap>nav.nav .brand{margin-right:6px}
+  main.wrap>nav.nav a:not(.brand){padding:0 14px;border:1px solid rgba(255,255,255,.18);border-radius:999px;text-decoration:none}
+  .crumb a{display:inline-block;padding:10px 2px}
+
+  /* footer links: comfortable tap targets */
+  footer a,.footer a{display:inline-flex;align-items:center;min-height:44px;padding-inline:4px}
+  .f-tools a,.f-grid a{display:inline-flex;align-items:center;min-height:40px}
+
+  button,.btn,.cta,[role=button]{min-height:44px}
+
+  /* QR generator pages: header links + small labels */
+  header.wrap.nav .brand,header.wrap.nav .back{display:inline-flex;align-items:center;min-height:44px}
+  .eyebrow{font-size:12px}
+}
+
+/* ---------- Home page ---------- */
+@media (max-width:820px){
+  /* "How it works" (.steps) and tool "How to use" (.how) used to be hidden on phones */
+  .steps{grid-template-columns:1fr;gap:14px}
+  .how{grid-template-columns:1fr;gap:12px}
+  .step{padding:22px}
+}
+@media (max-width:560px){
+  /* tool list as compact rows: titles no longer wrap into 3 lines */
+  .ilp-grid{grid-template-columns:1fr;gap:10px}
+  .ilp-grid .tool-card{display:grid;grid-template-columns:52px minmax(0,1fr);column-gap:14px;row-gap:1px;align-items:center;min-height:0;padding:14px 16px}
+  .ilp-grid .tool-card .t-ico{grid-row:1 / span 2;width:52px;height:52px;border-radius:16px;margin:0;font-size:1.5rem}
+  .ilp-grid .tool-card h3{font-size:1.05rem;margin:0;align-self:end;line-height:1.25}
+  .ilp-grid .tool-card p{font-size:.86rem;line-height:1.4;margin:0;align-self:start;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+  .cat-tab{min-height:44px}
+  .scene{margin:-48px 0}
+}
