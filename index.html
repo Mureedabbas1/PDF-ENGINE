@@ -371,6 +371,7 @@ body{background-attachment:scroll}
 .f-bottom a{color:var(--cyan)}
 @media(max-width:1100px){.f-grid.f-tools{grid-template-columns:repeat(3,1fr)}.f-tools .f-brand{grid-column:1/-1}}
 @media(max-width:560px){.f-grid.f-tools{grid-template-columns:repeat(2,1fr)}.f-bottom{justify-content:center;text-align:center}}
+#pdf-engine-welcome{position:fixed;inset:0;z-index:99999;display:grid;place-items:center;overflow:hidden;background:#070b1a;color:#fff;opacity:1;visibility:visible;transition:opacity .65s,visibility .65s}#pdf-engine-welcome:before{content:"";position:absolute;inset:-8px;background:url('backgrond.png') center/cover no-repeat;filter:blur(2px) brightness(.58);transform:scale(1.025)}#pdf-engine-welcome:after{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(4,10,27,.68),rgba(3,20,34,.38),rgba(4,10,27,.72))}#pdf-engine-welcome .pe-welcome-content{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;text-align:center;padding:28px;animation:peWelcomeIn .9s ease both}#pdf-engine-welcome img{width:clamp(100px,15vw,150px);max-height:150px;object-fit:contain;filter:drop-shadow(0 0 24px rgba(34,211,238,.38));margin-bottom:22px}#pdf-engine-welcome h1{font:800 clamp(2rem,5vw,3.5rem)/1.1 'Outfit',system-ui,sans-serif;letter-spacing:-1px;margin:0 0 12px;color:#fff;text-shadow:0 3px 24px #0008}#pdf-engine-welcome h1 span{color:#22d3ee}#pdf-engine-welcome p{font:700 clamp(.8rem,1.7vw,1rem)/1.5 system-ui,sans-serif;letter-spacing:.2em;color:#d7faff;text-transform:uppercase;text-shadow:0 2px 12px #000}#pdf-engine-welcome.is-hidden{opacity:0;visibility:hidden;pointer-events:none}@keyframes peWelcomeIn{from{opacity:0;transform:translateY(16px) scale(.97)}to{opacity:1;transform:translateY(0) scale(1)}}@media(prefers-reduced-motion:reduce){#pdf-engine-welcome,#pdf-engine-welcome .pe-welcome-content{transition:none;animation:none}}
 </style>
 <script>try{var t=localStorage.getItem('pe-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "PDF Engine", "url": "https://pdfengine.site/", "logo": "https://pdfengine.site/og-image.png"}</script>
@@ -409,6 +410,7 @@ body{background-attachment:scroll}
 <style id="mobile-fixes">@media (max-width:640px){html{overflow-x:clip;-webkit-text-size-adjust:100%}body{overflow-wrap:anywhere}input,select,textarea{font-size:16px;max-width:100%}input[type=file]{width:100%;box-sizing:border-box}img,video,canvas{max-width:100%}img{height:auto}footer a,nav a,header a,.footer a{padding-block:10px}button,.btn,.cta,[role=button]{min-height:40px}}</style>
 <link rel="stylesheet" href="/mobile.css?v=20261108"></head>
 <body>
+<div id="pdf-engine-welcome" role="status" aria-label="Welcome to PDF Engine"><div class="pe-welcome-content"><img src="logo.svg" alt="PDF Engine logo"><h1>Welcome to <span>PDF Engine</span></h1><p>20 Free Tools · No Sign-up · Browser-Based</p></div></div>
 <div class="blobs" aria-hidden="true"><i></i><i></i><i></i></div>
 <header class="nav glass">
 <div class="nav-in">
@@ -1223,4 +1225,5 @@ window.PE_DATA.homeTitle=document.title;</script>
 })();
 </script>
 
+<script>(function(){var screen=document.getElementById('pdf-engine-welcome');if(!screen)return;var hide=function(){screen.classList.add('is-hidden');};var timer=window.setTimeout(hide,7000);screen.addEventListener('click',function(){window.clearTimeout(timer);hide();});})();</script>
 </body></html>
