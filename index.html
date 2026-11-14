@@ -57,7 +57,7 @@
   --shadow:0 20px 50px rgba(30,60,120,.15);
 }
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
+html{scroll-behavior:auto}
 body{font-family:'Inter',system-ui,-apple-system,Segoe UI,sans-serif;color:var(--text);background:linear-gradient(160deg,var(--bg) 0%,var(--bg2) 100%) fixed;min-height:100vh;line-height:1.65;overflow-x:hidden;-webkit-font-smoothing:antialiased}
 h1,h2,h3,h4,.logo b,.btn,.badge{font-family:'Outfit','Space Grotesk',system-ui,sans-serif}
 a{color:inherit;text-decoration:none}
@@ -1169,7 +1169,7 @@ window.PE_DATA.homeTitle=document.title;</script>
   var AD='';
   function showHome(anchor){
     vp.hidden=true; vp.innerHTML=''; vh.hidden=false; document.title=D.homeTitle;
-    if(anchor){var el=document.getElementById(anchor); if(el){setTimeout(function(){el.scrollIntoView({behavior:'smooth'});},30); return;}}
+    if(anchor){var el=document.getElementById(anchor); if(el){setTimeout(function(){el.scrollIntoView({behavior:'auto',block:'start'});},30); return;}}
     window.scrollTo(0,0);
   }
   function showTool(t){
