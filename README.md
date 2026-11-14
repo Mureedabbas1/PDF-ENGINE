@@ -25,7 +25,7 @@ The homepage presents 20 tools: Merge PDF, Split PDF, Compress PDF, JPG to PDF, 
 
 ## Analytics and advertising
 
-The current homepage and selected site pages contain Google Analytics 4 (G-K1RMFHCTEP) and Google AdSense publisher code (ca-pub-6162822251101594). Code presence does not mean ads are approved or currently being served. Review the live Privacy Policy and confirm any consent-management requirements in the relevant Google account settings before enabling advertising for regions where consent is required.
+The GitHub Pages build step adds Google Analytics 4 (G-K1RMFHCTEP), the Google AdSense loader and the publisher-account meta tag to HTML pages when they are not already present. The SEO workflow checks the tool and guide landing pages for these tags. Code presence does not mean ads are approved or currently being served. Review the live Privacy Policy and confirm any consent-management requirements in the relevant Google account settings before enabling advertising for regions where consent is required.
 
 ## Deployment and quality checks
 
