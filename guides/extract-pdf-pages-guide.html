@@ -20,11 +20,54 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "url": "https://pdfengine.site/guides/extract-pdf-pages-guide.html", "headline": "Extract PDF Pages: A Practical Guide", "description": "Learn how to save selected pages from a larger PDF as a separate file without sharing the entire document.", "inLanguage": "en", "isPartOf": {"@type": "WebSite", "name": "PDF Engine", "url": "https://pdfengine.site/"}, "publisher": {"@type": "Organization", "name": "PDF Engine", "url": "https://pdfengine.site/"}, "mainEntityOfPage": "https://pdfengine.site/guides/extract-pdf-pages-guide.html"}</script>
 <link rel="stylesheet" href="/mobile.css?v=20261108"></head>
 <body><header><a class="brand" href="https://pdfengine.site/">PDF Engine</a><nav><a href="https://pdfengine.site/">Home &amp; Tools</a><a href="https://pdfengine.site/guides/">Guides</a><a href="https://pdfengine.site/tools/">All tools</a><a href="https://pdfengine.site/about.html">About</a><a href="https://pdfengine.site/privacy.html">Privacy</a></nav></header>
-<main><p><a href="https://pdfengine.site/guides/">Guides</a> / Extract PDF Pages</p><h1>Extract PDF Pages: A Practical Guide</h1><p>Extracting PDF pages is useful when only a chapter, receipt, signed page, or section needs to be sent to someone. It can reduce file size and avoid sharing unrelated material, but the page selection should be checked carefully.</p>
-<h2>When to use Extract PDF Pages</h2><ul><li>Send only the relevant pages of a report.</li><li>Separate a receipt or certificate from a combined scan.</li><li>Create a short reading packet from a longer document.</li></ul>
-<h2>How to use the Extract PDF Pages tool</h2><ol><li>Open Extract Pages and select the source PDF.</li><li>Choose the exact page numbers or range to keep, following the tool's format.</li><li>Run extraction and download the new PDF.</li><li>Open the result and verify the first page, last page, page count, and sequence.</li></ol>
-<h2>Tips for a better result</h2><ul><li>Check whether the tool expects page numbers separated by commas or ranges.</li><li>Remember that the original page labels may differ from the PDF's physical page index.</li><li>Keep the full original if you may need other pages later.</li></ul>
-<div class="panel"><h2>Open the tool</h2><p>Use the matching PDF Engine tool after reading the steps. Download and inspect the result before relying on it.</p><p><a class="cta" href="https://pdfengine.site/#/extract-pages">Open Extract PDF Pages →</a></p></div>
-<h2>Limitations and privacy</h2><p>Results depend on the input file, browser memory, and the supported features of the PDF or image format. Encrypted, damaged, unusually large, or complex files may fail. PDF Engine is designed for supported processing in your browser, but the page may load third-party JavaScript libraries. Keep the original file and check the output before sharing. For sensitive documents, follow your organization's data-handling rules.</p>
-<h2>Frequently asked question</h2><p>Extraction creates a separate PDF containing selected pages; it does not necessarily erase those pages from the source file. Use Remove Pages if you want a copy with selected pages omitted.</p>
-<p>Explore more <a href="https://pdfengine.site/tools/">PDF Engine tools</a> or browse the <a href="https://pdfengine.site/guides/">complete guide library</a>.</p></main><footer>© 2026 PDF Engine · Practical guides for browser-based file tools.</footer></body></html>
+<main><h1>Extract PDF Pages: A Practical Guide</h1><p>Extracting pages means making a new PDF out of a selection from an existing one. It is what you do when you need page 14 of a contract, the invoice buried in a 60-page statement, or the two pages of a manual that your colleague actually needs. The result is a smaller, focused file that is easier to send and harder to misread.</p>
+
+<h2>When extraction is the right choice</h2>
+<ul>
+<li>Sharing one section of a long document without exposing the rest.</li>
+<li>Attaching just the relevant pages to an email or support ticket.</li>
+<li>Building a new document from pieces of several others (extract from each, then merge).</li>
+<li>Saving form pages or certificates out of a big scanned batch.</li>
+</ul>
+<p>The <a href="../index.html#/split-pdf">Split PDF tool</a> offers the same extraction plus a mode that creates one file per page. Choose Extract Pages when you simply want the selection, with fewer options on screen.</p>
+
+<h2>Step by step</h2>
+<ol>
+<li>Open the document in a viewer and note the page numbers you need.</li>
+<li>Open the <a href="../index.html#/extract-pages">Extract Pages tool</a> and add your PDF.</li>
+<li>Type the pages into the range box. For example <code>1-3</code>, <code>2, 7, 9</code> or <code>12-</code> for page 12 to the end. Typing <code>all</code> copies every page.</li>
+<li>Click <strong>Extract pages</strong>. The tool tells you how many pages were extracted and saves <code>yourfile-extracted.pdf</code>.</li>
+</ol>
+
+<h2>The order of pages in the result</h2>
+<p>Pages are written in the order in which you list them, not in their original order. Entering <code>9, 2-3</code> produces a three-page file starting with page 9. That is a handy side effect when you want a cover or summary to come first, but it can surprise you if you list numbers casually. A range typed backwards is corrected, so <code>6-4</code> becomes 4 to 6. Duplicate numbers are collapsed, so each page appears once, and numbers outside the document cause an error message instead of a partial result.</p>
+
+<h2>Choosing page numbers reliably</h2>
+<p>PDF viewers show a page counter such as "14 / 60". That number is the one the tool uses. Printed numbers can differ if the document has a cover, roman-numeral front matter or sections numbered separately. When in doubt, scroll to the page in the viewer and read the counter rather than the number printed in the footer. For long documents, note the first and last page of the section you want, since a section's final page often contains only a few lines.</p>
+
+<h2>Common mistakes</h2>
+<ul>
+<li><strong>Extracting too tightly.</strong> A table or paragraph that continues onto the next page will be cut off. Include the following page if the content runs over.</li>
+<li><strong>Forgetting related pages.</strong> An attachment may refer to a definitions page or schedule that is somewhere else in the document.</li>
+<li><strong>Assuming the extract is private.</strong> Check that the extracted pages do not include a header or footer with information you meant to hold back, and read <a href="pdf-privacy-before-sharing.html">PDF privacy before you share</a>.</li>
+<li><strong>Not renaming the file.</strong> The default name is fine for you, but a recipient expects something descriptive such as "lease-agreement-signature-page.pdf".</li>
+<li><strong>Treating an extract of a signed file as signed.</strong> Signatures belong to the original file.</li>
+</ul>
+
+<h2>Quality and limits</h2>
+<p>Pages are copied rather than re-rendered, so text stays selectable and image quality is unchanged. Small extracts from a large document are generally much smaller than the source, although fonts and shared images can add some overhead. A password-protected file cannot be opened by the tool. If the file you need is very large, give the browser a moment, because the whole document has to be read in memory before pages are copied. Hyperlinks inside the extracted pages that point to other pages of the original will no longer lead anywhere useful, so test links if they matter.</p>
+
+<h2>Check the result</h2>
+<p>Confirm the page count, then read the first and last page. If you extracted several ranges, make sure the join between them looks right. If the extracted pages need to go into a larger document, continue with the <a href="merge-pdf-files.html">merge guide</a>. If you would rather delete pages than select them, use the <a href="remove-pdf-pages-guide.html">remove pages guide</a>.</p>
+
+<h2>A realistic example</h2>
+<p>A 90-page bank statement contains one page with the transaction a landlord asked to see, plus the account summary on page 1. Type <code>1, 63</code> to produce a two-page file with the summary first and the transaction page second. Before sending, read both pages for unrelated transactions or personal details that were not requested, since a statement page is rarely limited to the line you care about. If there is too much unrelated detail, ask whether a different document would serve the purpose better.</p>
+
+<h2>Short FAQ</h2>
+<h3>Does extracting change the original file?</h3>
+<p>No. A new file is created.</p>
+<h3>Can I extract from a scanned document?</h3>
+<p>Yes. Scanned pages are images, and they are copied as they are. See <a href="scanned-vs-text-pdf.html">scanned vs text PDFs</a>.</p>
+<h3>What is the maximum number of pages?</h3>
+<p>There is no limit set by the tool; your device's memory is the practical limit.</p>
+</main><footer>© 2026 PDF Engine · Practical guides for browser-based file tools.</footer></body></html>

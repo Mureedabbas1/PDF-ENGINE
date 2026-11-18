@@ -20,11 +20,57 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "url": "https://pdfengine.site/guides/reorder-pdf-pages-guide.html", "headline": "Reorder PDF Pages: A Practical Guide", "description": "Arrange PDF pages in the correct sequence for a report, scan, portfolio, or application packet.", "inLanguage": "en", "isPartOf": {"@type": "WebSite", "name": "PDF Engine", "url": "https://pdfengine.site/"}, "publisher": {"@type": "Organization", "name": "PDF Engine", "url": "https://pdfengine.site/"}, "mainEntityOfPage": "https://pdfengine.site/guides/reorder-pdf-pages-guide.html"}</script>
 <link rel="stylesheet" href="/mobile.css?v=20261108"></head>
 <body><header><a class="brand" href="https://pdfengine.site/">PDF Engine</a><nav><a href="https://pdfengine.site/">Home &amp; Tools</a><a href="https://pdfengine.site/guides/">Guides</a><a href="https://pdfengine.site/tools/">All tools</a><a href="https://pdfengine.site/about.html">About</a><a href="https://pdfengine.site/privacy.html">Privacy</a></nav></header>
-<main><p><a href="https://pdfengine.site/guides/">Guides</a> / Reorder PDF Pages</p><h1>Reorder PDF Pages: A Practical Guide</h1><p>A scanned or assembled PDF can contain pages in the wrong order. Reordering helps restore a logical flow before a document is read, printed, or submitted.</p>
-<h2>When to use Reorder PDF Pages</h2><ul><li>Correct pages scanned in a mixed sequence.</li><li>Move an appendix or cover page to the right position.</li><li>Organize a portfolio or application packet.</li></ul>
-<h2>How to use the Reorder PDF Pages tool</h2><ol><li>Open Reorder PDF Pages and upload the source PDF.</li><li>Review the page thumbnails or page positions to identify the intended sequence.</li><li>Move pages into the correct order and process the file.</li><li>Download the result and read through the whole document to confirm the sequence.</li></ol>
-<h2>Tips for a better result</h2><ul><li>Write down the desired sequence first for long documents.</li><li>Check page numbers printed on the page as well as the viewer's page index.</li><li>Review bookmarks and table-of-contents references after reordering.</li></ul>
-<div class="panel"><h2>Open the tool</h2><p>Use the matching PDF Engine tool after reading the steps. Download and inspect the result before relying on it.</p><p><a class="cta" href="https://pdfengine.site/#/reorder-pdf-pages">Open Reorder PDF Pages →</a></p></div>
-<h2>Limitations and privacy</h2><p>Results depend on the input file, browser memory, and the supported features of the PDF or image format. Encrypted, damaged, unusually large, or complex files may fail. PDF Engine is designed for supported processing in your browser, but the page may load third-party JavaScript libraries. Keep the original file and check the output before sharing. For sensitive documents, follow your organization's data-handling rules.</p>
-<h2>Frequently asked question</h2><p>Reordering changes the sequence of pages in the output PDF. It may not automatically update printed page numbers, bookmarks, or references inside the document.</p>
-<p>Explore more <a href="https://pdfengine.site/tools/">PDF Engine tools</a> or browse the <a href="https://pdfengine.site/guides/">complete guide library</a>.</p></main><footer>© 2026 PDF Engine · Practical guides for browser-based file tools.</footer></body></html>
+<main><h1>Reorder PDF Pages: A Practical Guide</h1><p>Pages end up in the wrong order more often than you might expect. A scanner reads a stack back to front, a document is assembled from several sources, or an appendix has to move in front of the conclusion. Reordering fixes the sequence without retyping anything. The PDF Engine tool is based on typing the new order, so a little planning saves a lot of retries.</p>
+
+<h2>When you need it</h2>
+<ul>
+<li>A double-sided scan produced the pages in an interleaved or reversed sequence.</li>
+<li>A merged document needs one section moved earlier or later.</li>
+<li>A cover sheet or signature page needs to come first.</li>
+<li>You want a print-ready order, such as a handout with a summary page on top.</li>
+</ul>
+
+<h2>How the tool thinks about order</h2>
+<p>You list every page number in the order you want them to appear. The tool requires each page of the document to appear exactly once. If your PDF has six pages and you type <code>3,1,2</code>, it will refuse and tell you to enter all page numbers from 1 to 6. That rule is helpful: it makes accidental deletion or duplication impossible. If you do want pages removed or repeated, use <a href="../index.html#/remove-pdf-pages">Remove Pages</a> or <a href="../index.html#/extract-pages">Extract Pages</a> instead, which accept ranges and let you pick.</p>
+
+<h2>Step by step</h2>
+<ol>
+<li>Open the document in your normal PDF viewer and write down what each page is. A line per page is enough: "1 cover, 2 summary, 3 invoice..."</li>
+<li>Decide the target sequence and write it as numbers separated by commas.</li>
+<li>Open the <a href="../index.html#/reorder-pdf-pages">Reorder Pages tool</a> and add your PDF.</li>
+<li>Replace the example in the order box with your sequence, for instance <code>4,1,2,3,5</code>.</li>
+<li>Click <strong>Reorder pages</strong>. The file is saved as <code>yourfile-reordered.pdf</code>.</li>
+</ol>
+
+<h2>Worked examples</h2>
+<p><strong>Move the last page to the front</strong> in a 5-page file: <code>5,1,2,3,4</code>.</p>
+<p><strong>Reverse a 4-page document</strong>, as when a stack was scanned upside down in the feeder: <code>4,3,2,1</code>.</p>
+<p><strong>Fix a double-sided scan</strong> where all fronts came first, then all backs in reverse, in an 8-page file. The fronts are pages 1 to 4 and the backs are 5 to 8, with the back of the last sheet scanned first. The correct sequence is <code>1,8,2,7,3,6,4,5</code>. Writing these examples on paper first is the easiest way to avoid mistakes in a long file.</p>
+<p>For long documents, do the job in stages: move one section, check it, then move the next. Do not try to type a 60-number sequence in one go.</p>
+
+<h2>Common mistakes</h2>
+<ul>
+<li><strong>Leaving out a page.</strong> The tool will warn you, but the usual cause is a skipped number in a long list.</li>
+<li><strong>Using spaces and dashes.</strong> The order box takes plain numbers with commas. Ranges such as <code>1-3</code> work in other tools but not here, so spell every number out.</li>
+<li><strong>Working from printed page numbers.</strong> Always use the position of the page in the PDF viewer.</li>
+<li><strong>Reordering before cleaning.</strong> Remove blank and duplicate pages first so the numbers stay short.</li>
+<li><strong>Forgetting orientation.</strong> If a moved page is sideways, rotate it afterwards with the <a href="rotate-pdf-guide.html">rotate guide</a>.</li>
+</ul>
+
+<h2>Quality and limits</h2>
+<p>Pages are copied into a new document in the order you give, with no re-rendering, so text stays selectable and there is no quality loss. The file size stays close to the original. Page labels or links that point to a page by position can be affected, so if the document has a clickable contents page, click through a few entries afterwards. Page numbers printed on the pages themselves do not change, because they are part of the page. If numbers were added by a tool earlier, you will need to remove or redo them; adding numbers last, using <a href="../index.html#/add-page-numbers-to-pdf">Add Page Numbers</a>, avoids the problem.</p>
+
+<h2>Check the result</h2>
+<p>Scroll through the finished file from start to end and read the heading or first line of every page. That takes a minute and catches nearly every mistake. For longer projects, the <a href="assemble-clean-multi-page-pdf.html">assembly checklist</a> puts reordering in context with the other steps.</p>
+
+<h2>Planning a longer reorder</h2>
+<p>For a document of 20 or more pages, write the current order down as a table with two columns: the current page number and its content. Then write the new order in a second column by crossing off each page as you place it. Copying the final list into the tool is then a mechanical step. Read the list aloud once to catch skipped numbers, and count the entries: the count must equal the number of pages. If the tool reports an error, it is almost always one missing or one repeated number, so compare your list against the table instead of retyping from scratch.</p>
+
+<h2>Short FAQ</h2>
+<h3>Can I drag and drop pages?</h3>
+<p>No, this tool works from a typed order.</p>
+<h3>Does it work for a single-page file?</h3>
+<p>It runs, but there is nothing to reorder.</p>
+<h3>Can I reorder pages across several files?</h3>
+<p>Merge the files first, then reorder the combined document.</p>
+</main><footer>© 2026 PDF Engine · Practical guides for browser-based file tools.</footer></body></html>

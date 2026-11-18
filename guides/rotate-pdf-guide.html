@@ -20,11 +20,53 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "url": "https://pdfengine.site/guides/rotate-pdf-guide.html", "headline": "Rotate PDF: A Practical Guide", "description": "A practical guide to rotating sideways or upside-down PDF pages and checking the saved orientation.", "inLanguage": "en", "isPartOf": {"@type": "WebSite", "name": "PDF Engine", "url": "https://pdfengine.site/"}, "publisher": {"@type": "Organization", "name": "PDF Engine", "url": "https://pdfengine.site/"}, "mainEntityOfPage": "https://pdfengine.site/guides/rotate-pdf-guide.html"}</script>
 <link rel="stylesheet" href="/mobile.css?v=20261108"></head>
 <body><header><a class="brand" href="https://pdfengine.site/">PDF Engine</a><nav><a href="https://pdfengine.site/">Home &amp; Tools</a><a href="https://pdfengine.site/guides/">Guides</a><a href="https://pdfengine.site/tools/">All tools</a><a href="https://pdfengine.site/about.html">About</a><a href="https://pdfengine.site/privacy.html">Privacy</a></nav></header>
-<main><p><a href="https://pdfengine.site/guides/">Guides</a> / Rotate PDF</p><h1>Rotate PDF: A Practical Guide</h1><p>A PDF can contain sideways scanned pages, landscape diagrams, or a single page that is upside down. Rotating pages makes a document easier to read without recreating it from the source file.</p>
-<h2>When to use Rotate PDF</h2><ul><li>Correct pages scanned in the wrong orientation.</li><li>Make landscape charts readable in a report.</li><li>Fix a single page without rotating every page in the document.</li></ul>
-<h2>How to use the Rotate PDF tool</h2><ol><li>Open the Rotate PDF tool and choose your PDF.</li><li>Select the pages that need correction and choose the required rotation direction.</li><li>Apply the change and download the processed PDF.</li><li>Reopen the result and inspect several pages, including the pages before and after each change.</li></ol>
-<h2>Tips for a better result</h2><ul><li>Rotate only the affected pages when the document mixes portrait and landscape layouts.</li><li>Check the saved file in another PDF reader if the orientation appears unchanged.</li><li>Keep a backup before changing important or signed documents.</li></ul>
-<div class="panel"><h2>Open the tool</h2><p>Use the matching PDF Engine tool after reading the steps. Download and inspect the result before relying on it.</p><p><a class="cta" href="https://pdfengine.site/#/rotate-pdf">Open Rotate PDF →</a></p></div>
-<h2>Limitations and privacy</h2><p>Results depend on the input file, browser memory, and the supported features of the PDF or image format. Encrypted, damaged, unusually large, or complex files may fail. PDF Engine is designed for supported processing in your browser, but the page may load third-party JavaScript libraries. Keep the original file and check the output before sharing. For sensitive documents, follow your organization's data-handling rules.</p>
-<h2>Frequently asked question</h2><p>Rotation changes the page display orientation, not the text content itself. Some specialized PDFs may not behave as expected, so verify the downloaded file.</p>
-<p>Explore more <a href="https://pdfengine.site/tools/">PDF Engine tools</a> or browse the <a href="https://pdfengine.site/guides/">complete guide library</a>.</p></main><footer>© 2026 PDF Engine · Practical guides for browser-based file tools.</footer></body></html>
+<main><h1>Rotate PDF: A Practical Guide</h1><p>A page that opens sideways is one of the most common PDF annoyances. It usually comes from a scanner feeding paper the wrong way, a phone photo taken in landscape, or a landscape table dropped into a portrait report. Rotation is fast to fix, but there are a few details worth understanding so you do not rotate the wrong pages.</p>
+
+<h2>When to use rotate</h2>
+<ul>
+<li>A scanned batch where some sheets came through upside down or sideways.</li>
+<li>A mixed document in which one wide table or drawing should be readable without turning your head.</li>
+<li>A photo-based PDF that was assembled from phone pictures with inconsistent orientation.</li>
+</ul>
+<p>Rotation does not change what is on the page. It tells the viewer to display the page turned by 90, 180 or 270 degrees. That is why text stays selectable and the file size barely changes, unlike tools that re-render each page.</p>
+
+<h2>Step by step</h2>
+<ol>
+<li>Open the <a href="../index.html#/rotate-pdf">Rotate PDF tool</a> and add your PDF.</li>
+<li>Choose the direction: <strong>90&deg; right</strong> (clockwise), <strong>180&deg;</strong> for upside down, or <strong>90&deg; left</strong>.</li>
+<li>In the <strong>Pages</strong> box, leave <code>all</code> to turn every page, or type a selection such as <code>2</code>, <code>1-3, 7</code> or <code>9-</code>.</li>
+<li>Click <strong>Rotate PDF</strong>. The tool reports how many pages were turned and downloads <code>yourfile-rotated.pdf</code>.</li>
+</ol>
+
+<h2>Working out the right angle</h2>
+<p>Picture the top of the page. If the top of the text points to the left side of your screen, the page needs to go 90 degrees right. If it points to the right, choose 90 degrees left. If the text is upside down, use 180. When unsure, rotate one page, check it, and repeat. The tool adds your turn to whatever rotation the page already has, so running it twice with 90 right gives you 180 in total, which is a frequent cause of "it got worse".</p>
+
+<h2>Rotating only some pages</h2>
+<p>The page selection matters most for scanned batches. Open the original, note the page numbers that are wrong, and enter exactly those. Group them by direction: all the pages that need 90 right in one run, those that need 180 in another. That is two quick passes rather than guesswork. If the wrong pages alternate in a regular pattern, for example every second page from a double-sided scan, you will need to list them individually, for example <code>2, 4, 6, 8</code>.</p>
+
+<h2>Common mistakes</h2>
+<ul>
+<li><strong>Rotating everything when only a few pages are wrong.</strong> Leave the default <code>all</code> only if all pages are wrong.</li>
+<li><strong>Confusing the printed page number with the PDF page number.</strong> Use the number your PDF viewer shows.</li>
+<li><strong>Forgetting that a page may already be flagged as rotated.</strong> Some scanners store pages upright but mark them with a rotation. Preview the result rather than reasoning from the original.</li>
+<li><strong>Expecting the file to open in the new orientation everywhere.</strong> Rotation is honoured by all modern viewers, but a handful of old tools ignore it. Test in the reader your recipient is likely to use.</li>
+<li><strong>Rotating a phone photo PDF without checking the photos.</strong> If you are building a PDF from images, see the <a href="jpg-to-pdf-guide.html">JPG to PDF guide</a>, which explains how to avoid sideways photos at the source.</li>
+</ul>
+
+<h2>Quality and limits</h2>
+<p>Because nothing is re-rendered, there is no quality loss. Fonts, images and vector drawings are untouched. The only limits are the usual ones: a file that needs a password to open cannot be processed, and very large files depend on your browser's available memory. The result is a new file, so the original remains unchanged on your device.</p>
+
+<h2>Check the result</h2>
+<p>Scroll through the whole document, not just the pages you rotated. Look for pages that were fine before and are now sideways, and check that page numbers, headers and signatures still read in the right direction. If you also plan to merge, rotate each source first, then merge, so you are not hunting for pages in a long file. Page order can be adjusted afterwards with <a href="reorder-pdf-pages-guide.html">reorder PDF pages</a>.</p>
+
+<h2>A realistic example</h2>
+<p>A 12-page scan comes back with pages 3, 4 and 9 upside down and page 7 turned on its side. Run the tool twice. The first pass uses 180 degrees with the pages box set to <code>3-4, 9</code>. The second uses 90 degrees right, or left depending on which way the text leans, with <code>7</code>. Preview the result before sending. This two-run method is much faster than rotating everything and then fixing the pages that were correct, and it leaves untouched pages exactly as they were.</p>
+
+<h2>Short FAQ</h2>
+<h3>Does rotating make the file bigger?</h3>
+<p>Barely. Only a small per-page setting changes.</p>
+<h3>Can I rotate by a custom angle such as 15 degrees?</h3>
+<p>No. Only 90, 180 and 270 degrees are offered. A slightly crooked scan has to be straightened in the scanning step.</p>
+<h3>Will the rotation be permanent?</h3>
+<p>It is saved in the new file. Rotating again later simply adds to it.</p>
+</main><footer>© 2026 PDF Engine · Practical guides for browser-based file tools.</footer></body></html>

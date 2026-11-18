@@ -26,4 +26,65 @@ main{padding-top:34px;padding-bottom:48px}h1,h2,h3{line-height:1.25}h1{font-size
 <style id="mobile-fixes">@media (max-width:640px){html{overflow-x:clip;-webkit-text-size-adjust:100%}body{overflow-wrap:anywhere}input,select,textarea{font-size:16px;max-width:100%}input[type=file]{width:100%;box-sizing:border-box}img,video,canvas{max-width:100%}img{height:auto}footer a,nav a,header a,.footer a{padding-block:10px}button,.btn,.cta,[role=button]{min-height:40px}}</style>
 <link rel="icon" type="image/svg+xml" href="/logo.svg">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "url": "https://pdfengine.site/guides/compress-pdf.html", "headline": "How to Compress a PDF", "description": "Learn when PDF compression helps, how image-based compression affects text, and how to compare output size.", "inLanguage": "en", "isPartOf": {"@type": "WebSite", "name": "PDF Engine", "url": "https://pdfengine.site/"}, "publisher": {"@type": "Organization", "name": "PDF Engine", "url": "https://pdfengine.site/"}, "mainEntityOfPage": "https://pdfengine.site/guides/compress-pdf.html"}</script>
-<link rel="stylesheet" href="/mobile.css?v=20261108"></head><body><header><a class="brand" href="https://pdfengine.site/">PDF Engine</a><nav><a href="https://pdfengine.site/">Home &amp; Tools</a><a href="https://pdfengine.site/guides/">Guides</a><a href="https://pdfengine.site/about.html">About</a><a href="https://pdfengine.site/contact.html">Contact</a><a href="https://pdfengine.site/privacy.html">Privacy</a><a href="https://pdfengine.site/terms.html">Terms</a></nav></header><main><h1>How to Compress a PDF</h1><p>PDF compression can help when a document is too large to email, upload or store. The best method depends on what the PDF contains. A file made mostly of scanned pages or photos may shrink significantly, while a text-based PDF that is already optimized may change very little.</p><h2>Choose a compression level</h2><ol><li>Open the <a href="../index.html#/compress-pdf">Compress PDF tool</a>.</li><li>Select the PDF and choose Maximum, Balanced or Light.</li><li>Run the operation and compare the output size with the original.</li><li>If the result is larger, keep the original or try a different level.</li></ol><h2>Understand the trade-off</h2><p>PDF Engine's current compression method renders pages as images and rebuilds a PDF from those images. This can reduce the size of scanned or image-heavy files, but text in the result is no longer selectable or searchable unless OCR is performed separately. Fine print, diagrams and small text can also lose detail at stronger settings. This is not the same as lossless optimization of every embedded object.</p><h2>How to check quality</h2><p>Open the result at normal and high zoom. Inspect small text, signatures, charts, barcodes and any page that contains important numbers. Check the page count and orientation too. For documents that must remain searchable, accessible or suitable for legal review, keep the original and use a workflow that preserves text or applies OCR.</p><h2>Privacy and limitations</h2><p>Processing runs in the browser, and large files may require substantial memory. The browser still downloads the code libraries used by the tool. If compression fails or does not save space, that does not necessarily mean the PDF is broken; the source may already be optimized or contain content that cannot be reduced much by this method.</p><p>Try the <a href="../index.html#/compress-pdf">Compress PDF tool</a> and compare both the file size and visual quality before sharing.</p></main><footer>© 2026 PDF Engine · Browser-based tools. Always keep an original copy of important files.</footer></body></html>
+<link rel="stylesheet" href="/mobile.css?v=20261108"></head><body><header><a class="brand" href="https://pdfengine.site/">PDF Engine</a><nav><a href="https://pdfengine.site/">Home &amp; Tools</a><a href="https://pdfengine.site/guides/">Guides</a><a href="https://pdfengine.site/about.html">About</a><a href="https://pdfengine.site/contact.html">Contact</a><a href="https://pdfengine.site/privacy.html">Privacy</a><a href="https://pdfengine.site/terms.html">Terms</a></nav></header><main><h1>How to Compress a PDF</h1><p>PDF compression is the tool people reach for when an upload fails with "file too large". It is also the tool most likely to surprise them, because PDF Engine's compressor works differently from the "optimize" button in desktop software. Knowing what it does lets you decide quickly whether it suits your file.</p>
+
+<h2>How the compressor works</h2>
+<p>The tool renders every page to an image in your browser, saves that image as a JPEG at a chosen quality, and builds a new PDF from those images. Page sizes stay the same. Three levels are offered:</p>
+<ul>
+<li><strong>Light (best quality)</strong> renders at roughly 144 dpi with high JPEG quality.</li>
+<li><strong>Balanced</strong> renders at roughly 108 dpi with medium-high quality.</li>
+<li><strong>Maximum (smallest)</strong> renders at roughly 72 dpi with lower quality.</li>
+</ul>
+<p>Those resolutions are the honest reason files shrink. They are also the reason you should read the next section before using it.</p>
+
+<h2>What you give up</h2>
+<p>Because pages become pictures, <strong>text in the compressed file is no longer selectable or searchable</strong>, links stop working, form fields are no longer fillable, and screen readers cannot read it. For a scanned document that never had real text, you lose nothing. For a report exported from Word, you lose a lot. At Maximum, small print and thin lines can look soft when zoomed in or printed.</p>
+
+<h2>When compression is a good idea</h2>
+<ul>
+<li>Scanned paperwork and photographed documents, which are images already.</li>
+<li>Slide decks or brochures that are mostly photographs.</li>
+<li>A file that must get under an email or portal limit, where readability on screen matters more than print quality.</li>
+</ul>
+<h2>When to choose something else</h2>
+<ul>
+<li>A text-heavy PDF that is already small. The result could be bigger than the original.</li>
+<li>Anything that must stay searchable, accessible or signed.</li>
+<li>A file where only a few pages are the problem. Remove unneeded pages with <a href="../index.html#/remove-pdf-pages">Remove Pages</a> or send part of it using <a href="../index.html#/split-pdf">Split PDF</a> first.</li>
+</ul>
+
+<h2>Step by step</h2>
+<ol>
+<li>Open the <a href="../index.html#/compress-pdf">Compress PDF tool</a> and add your file. Note its size.</li>
+<li>Start with <strong>Balanced</strong>.</li>
+<li>Click <strong>Compress PDF</strong>. Progress is shown page by page, so a long document takes a little while.</li>
+<li>The result shows the before and after size and the percentage saved. Download it, then open it and zoom in on the smallest text.</li>
+<li>If it is still too large, run the original again at Maximum. If it is too blurry, go back to Light. Always start from the original, never from an already-compressed copy, because compressing twice stacks the quality loss.</li>
+</ol>
+<p>If the tool reports that the result would be bigger than the original, it does not offer a download. That message means the file was already efficient; keep the original, or try Maximum once.</p>
+
+<h2>Common mistakes</h2>
+<ul>
+<li>Compressing the only copy. Keep the original, since the compression cannot be undone.</li>
+<li>Compressing a PDF that you still need to edit or search.</li>
+<li>Judging quality at "fit to screen" only. Check at 100 percent, and print one page if the document will be printed.</li>
+<li>Compressing before assembling. Merge, reorder and number the pages first, and compress last. The <a href="assemble-clean-multi-page-pdf.html">assembly checklist</a> explains the order.</li>
+</ul>
+
+<h2>Realistic expectations</h2>
+<p>There is no guaranteed percentage. A 30 MB scan of colour pages may fall to a few megabytes, while a 400 KB text export may not shrink at all. Colour photographs compress well, flat black and white scans less so, and very long documents are limited by your browser's memory. If a file still will not fit, <a href="prepare-pdf-for-email-and-upload.html">this article on email and upload limits</a> lists other options such as splitting into parts or using grayscale.</p>
+
+<h2>A realistic example</h2>
+<p>Take a 24 MB scan of an eight-page application form that a portal limits to 10 MB. Run Balanced first. If the result is around 5 MB and the handwriting is still easy to read at 100 percent zoom, you are done. If the portal limit were 2 MB, Maximum would be the next step, and you would then check that numbers and small print are still clear. If they are not, the better option may be to scan again at a lower resolution, in black and white where possible, instead of squeezing a high-resolution colour scan.</p>
+<h2>Compress or rescan?</h2>
+<p>If the source is a paper document and you still have the paper, rescanning is often better than compressing. A scan at 150 to 200 dpi in greyscale or black and white is naturally small and cleaner than a colour photo squeezed afterwards. Compression is the right tool when the paper is gone or the file came from someone else and you cannot change how it was made.</p>
+
+<h2>Short FAQ</h2>
+<h3>Is my file uploaded to be compressed?</h3>
+<p>No, the rendering and re-encoding all happen in your browser tab.</p>
+<h3>Why can I not copy text from the result?</h3>
+<p>The pages are images. Run text extraction on the original, or use the original wherever text matters.</p>
+<h3>Which level should I use for printing?</h3>
+<p>Light, and print a test page first.</p>
+<p>Also see <a href="scanned-vs-text-pdf.html">scanned vs text PDFs</a>, which explains why results differ so much between files.</p>
+</main><footer>© 2026 PDF Engine · Browser-based tools. Always keep an original copy of important files.</footer></body></html>

@@ -20,11 +20,60 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "url": "https://pdfengine.site/guides/add-watermark-guide.html", "headline": "Add Watermark: A Practical Guide", "description": "How to add a text watermark such as Draft or Confidential while keeping PDF pages readable.", "inLanguage": "en", "isPartOf": {"@type": "WebSite", "name": "PDF Engine", "url": "https://pdfengine.site/"}, "publisher": {"@type": "Organization", "name": "PDF Engine", "url": "https://pdfengine.site/"}, "mainEntityOfPage": "https://pdfengine.site/guides/add-watermark-guide.html"}</script>
 <link rel="stylesheet" href="/mobile.css?v=20261108"></head>
 <body><header><a class="brand" href="https://pdfengine.site/">PDF Engine</a><nav><a href="https://pdfengine.site/">Home &amp; Tools</a><a href="https://pdfengine.site/guides/">Guides</a><a href="https://pdfengine.site/tools/">All tools</a><a href="https://pdfengine.site/about.html">About</a><a href="https://pdfengine.site/privacy.html">Privacy</a></nav></header>
-<main><p><a href="https://pdfengine.site/guides/">Guides</a> / Add Watermark</p><h1>Add Watermark: A Practical Guide</h1><p>A watermark can label a document as a draft, sample, internal copy, or confidential version. The best watermark is noticeable enough to communicate status but light enough that readers can still read the underlying page.</p>
-<h2>When to use Add Watermark</h2><ul><li>Label a proposal as Draft before approval.</li><li>Mark a review copy as Confidential or Internal Use.</li><li>Identify sample documents shared for demonstration.</li></ul>
-<h2>How to use the Add Watermark tool</h2><ol><li>Open the Add Watermark tool and choose your PDF.</li><li>Enter concise watermark text and choose the available placement or appearance options.</li><li>Apply the watermark and download the output file.</li><li>Check pages with dense text, tables, images, and signatures to confirm that the watermark does not hide key information.</li></ol>
-<h2>Tips for a better result</h2><ul><li>Use short text and restrained opacity if the tool provides that option.</li><li>Avoid implying that a watermark provides encryption or access control.</li><li>Keep an unwatermarked original for future editing.</li></ul>
-<div class="panel"><h2>Open the tool</h2><p>Use the matching PDF Engine tool after reading the steps. Download and inspect the result before relying on it.</p><p><a class="cta" href="https://pdfengine.site/#/add-watermark-to-pdf">Open Add Watermark →</a></p></div>
-<h2>Limitations and privacy</h2><p>Results depend on the input file, browser memory, and the supported features of the PDF or image format. Encrypted, damaged, unusually large, or complex files may fail. PDF Engine is designed for supported processing in your browser, but the page may load third-party JavaScript libraries. Keep the original file and check the output before sharing. For sensitive documents, follow your organization's data-handling rules.</p>
-<h2>Frequently asked question</h2><p>A watermark is a visual label, not a security barrier. It does not stop copying or guarantee confidentiality; use appropriate document permissions for sensitive material.</p>
-<p>Explore more <a href="https://pdfengine.site/tools/">PDF Engine tools</a> or browse the <a href="https://pdfengine.site/guides/">complete guide library</a>.</p></main><footer>© 2026 PDF Engine · Practical guides for browser-based file tools.</footer></body></html>
+<main><h1>Add Watermark: A Practical Guide</h1><p>A watermark is a line of text laid across the pages of a document to tell the reader something about its status: DRAFT, CONFIDENTIAL, COPY, FOR REVIEW ONLY. Used well, it prevents an unfinished version from being mistaken for the final one. Used carelessly, it makes a page hard to read or gives a false sense of security. This guide explains how the PDF Engine watermark tool works and where it fits.</p>
+
+<h2>When a watermark makes sense</h2>
+<ul>
+<li>Sending a draft contract or proposal for comments, so nobody signs it by mistake.</li>
+<li>Sharing a copy of a document with a named purpose, such as "FOR MORTGAGE APPLICATION ONLY".</li>
+<li>Marking internal material as confidential before it circulates in a team.</li>
+<li>Labelling a sample or specimen page so it cannot pass as an original.</li>
+</ul>
+
+<h2>The options, in plain terms</h2>
+<p>The tool writes one line of text in the middle of every page. You choose:</p>
+<ul>
+<li><strong>Text</strong>, up to 40 characters. The default is CONFIDENTIAL. Only English (Latin) letters, numbers and common symbols are supported; a message in Arabic, Chinese or another script will be rejected with a clear error.</li>
+<li><strong>Size</strong>, from 10 to 200 points. The default of 60 is large and bold. Very long text at a large size will run off the page, so shorten the wording or reduce the size.</li>
+<li><strong>Angle</strong>: diagonal at 45 degrees, straight, or vertical.</li>
+<li><strong>Colour</strong>: grey, red, blue or black.</li>
+<li><strong>Opacity</strong>, from 5 to 80 percent. The default of 25 is faint enough to read through.</li>
+</ul>
+
+<h2>Step by step</h2>
+<ol>
+<li>Open the <a href="../index.html#/add-watermark-to-pdf">Add Watermark tool</a> and add your PDF.</li>
+<li>Type the watermark text. Keep it short and uppercase: one or two words read best.</li>
+<li>Pick a diagonal angle and grey colour for a classic look, or red for a strong warning.</li>
+<li>Click <strong>Add watermark</strong>, download <code>yourfile-watermarked.pdf</code> and inspect several pages.</li>
+</ol>
+
+<h2>Choosing settings that stay readable</h2>
+<p>The watermark is drawn on top of the existing page content, so a high opacity will cover text rather than sit behind it. Stay between 15 and 30 percent for body text. On pages with dark photographs or filled tables, grey at low opacity can disappear, and black or red may work better. If the document will be printed in black and white, check that a coloured watermark still shows as a visible grey rather than vanishing. Size matters as much as opacity: a diagonal word at size 60 on an A4 page crosses most of the sheet, which is the intent, while the same word at 150 may be cut off.</p>
+
+<h2>What a watermark cannot do</h2>
+<p>It is a label, not protection. Anyone who has the file can still copy the text beneath it, take screenshots, or recreate the page without it. Do not rely on a watermark to keep a document secret or to prove who leaked it, because the text is the same on every page and contains no hidden identification. For sensitive files, limit who receives them and review the checklist in <a href="pdf-privacy-before-sharing.html">PDF privacy before you share</a>.</p>
+
+<h2>Common mistakes</h2>
+<ul>
+<li><strong>Watermarking the only copy.</strong> The new file is separate, but keep your clean original for later use.</li>
+<li><strong>Watermarking before the document is finished.</strong> Assemble, reorder and number the pages first, then add the watermark last, so you never have to repeat it.</li>
+<li><strong>Using it on a document that is already watermarked.</strong> Two overlapping diagonals look messy.</li>
+<li><strong>Choosing wording that could be misread.</strong> "COPY" on a certified copy or "SAMPLE" on a live form can create confusion.</li>
+<li><strong>Letting the mark sit over a signature or a key figure.</strong> Check pages where important content is in the centre.</li>
+</ul>
+
+<h2>Quality and limits</h2>
+<p>The watermark is added as text rather than as a picture, so file size barely changes and the original text stays selectable. Every page receives the same text at the same central position; there is no tiling and no different setting per page. If you want a mark on only some pages, split those pages out, watermark them, and merge again with the <a href="merge-pdf-files.html">merge guide</a> steps. An encrypted file that needs a password cannot be processed.</p>
+
+<h2>A realistic example</h2>
+<p>You are sending a ten-page proposal to a client for comment. Choose the text DRAFT, a diagonal angle, grey colour, size 90 and opacity around 20. After downloading, open pages with dense tables and pages with photographs, because those are the places where a mark either gets lost or hides numbers. If it hides figures, lower the opacity or reduce the size. When the client approves, go back to your unwatermarked file and produce a clean final version, rather than trying to alter the draft copy.</p>
+
+<h2>Short FAQ</h2>
+<h3>Can I use my logo as a watermark?</h3>
+<p>No. The tool supports text only.</p>
+<h3>Can the recipient remove it?</h3>
+<p>With suitable software, yes. Treat it as a visible notice.</p>
+<h3>Will it work on scanned PDFs?</h3>
+<p>Yes. The text is drawn over the scanned image. Learn more in <a href="scanned-vs-text-pdf.html">scanned vs text PDFs</a>.</p>
+</main><footer>© 2026 PDF Engine · Practical guides for browser-based file tools.</footer></body></html>

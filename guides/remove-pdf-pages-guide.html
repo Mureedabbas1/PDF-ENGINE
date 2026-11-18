@@ -20,11 +20,54 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "url": "https://pdfengine.site/guides/remove-pdf-pages-guide.html", "headline": "Remove PDF Pages: A Practical Guide", "description": "Remove unwanted blank or duplicate pages from a PDF and verify that the remaining document still makes sense.", "inLanguage": "en", "isPartOf": {"@type": "WebSite", "name": "PDF Engine", "url": "https://pdfengine.site/"}, "publisher": {"@type": "Organization", "name": "PDF Engine", "url": "https://pdfengine.site/"}, "mainEntityOfPage": "https://pdfengine.site/guides/remove-pdf-pages-guide.html"}</script>
 <link rel="stylesheet" href="/mobile.css?v=20261108"></head>
 <body><header><a class="brand" href="https://pdfengine.site/">PDF Engine</a><nav><a href="https://pdfengine.site/">Home &amp; Tools</a><a href="https://pdfengine.site/guides/">Guides</a><a href="https://pdfengine.site/tools/">All tools</a><a href="https://pdfengine.site/about.html">About</a><a href="https://pdfengine.site/privacy.html">Privacy</a></nav></header>
-<main><p><a href="https://pdfengine.site/guides/">Guides</a> / Remove PDF Pages</p><h1>Remove PDF Pages: A Practical Guide</h1><p>Removing pages can clean up blank scans, duplicate sheets, or sections that should not appear in a shareable copy. Work on a copy and verify the result because page removal changes the document's sequence and may affect references.</p>
-<h2>When to use Remove PDF Pages</h2><ul><li>Delete blank pages caused by scanning.</li><li>Remove duplicate or irrelevant sheets before sharing.</li><li>Prepare a shorter version of a report.</li></ul>
-<h2>How to use the Remove PDF Pages tool</h2><ol><li>Open Remove PDF Pages and select the PDF.</li><li>Identify the page numbers to remove; use the PDF viewer to confirm them first.</li><li>Apply the removal and download the revised file.</li><li>Check page count, order, table of contents references, and any cross-references.</li></ol>
-<h2>Tips for a better result</h2><ul><li>Distinguish the displayed page label from the physical page position.</li><li>Do not assume removing a page securely erases every copy or hidden source data.</li><li>Retain the original until the revised document has been reviewed.</li></ul>
-<div class="panel"><h2>Open the tool</h2><p>Use the matching PDF Engine tool after reading the steps. Download and inspect the result before relying on it.</p><p><a class="cta" href="https://pdfengine.site/#/remove-pdf-pages">Open Remove PDF Pages →</a></p></div>
-<h2>Limitations and privacy</h2><p>Results depend on the input file, browser memory, and the supported features of the PDF or image format. Encrypted, damaged, unusually large, or complex files may fail. PDF Engine is designed for supported processing in your browser, but the page may load third-party JavaScript libraries. Keep the original file and check the output before sharing. For sensitive documents, follow your organization's data-handling rules.</p>
-<h2>Frequently asked question</h2><p>The tool makes a revised copy; your original file should remain unchanged. Removing visible pages is not the same as securely redacting sensitive information.</p>
-<p>Explore more <a href="https://pdfengine.site/tools/">PDF Engine tools</a> or browse the <a href="https://pdfengine.site/guides/">complete guide library</a>.</p></main><footer>© 2026 PDF Engine · Practical guides for browser-based file tools.</footer></body></html>
+<main><h1>Remove PDF Pages: A Practical Guide</h1><p>Deleting pages is the quiet clean-up step that makes a document look finished: the blank page the scanner added, the fax cover sheet, the duplicate receipt, the page of internal notes that should not leave the building. The PDF Engine tool does this in a few seconds, but the details of how you pick pages and what the tool guarantees are worth knowing.</p>
+
+<h2>When to remove pages</h2>
+<ul>
+<li>Blank sheets from double-sided scanning.</li>
+<li>Duplicates created while merging several files.</li>
+<li>Cover pages, drafts or scratch notes that do not belong in the final version.</li>
+<li>Pages containing information the recipient should not receive.</li>
+</ul>
+<p>If you are keeping only a few pages out of many, it is quicker to use <a href="../index.html#/extract-pages">Extract Pages</a> and list what you want to keep. Removing is better when the list of unwanted pages is short.</p>
+
+<h2>Step by step</h2>
+<ol>
+<li>Open the PDF in a viewer and write down the page numbers to delete. Use the viewer's page counter, not any printed numbers on the pages.</li>
+<li>Open the <a href="../index.html#/remove-pdf-pages">Remove Pages tool</a> and add your file.</li>
+<li>Enter the pages to remove. The box accepts single pages and ranges separated by commas: <code>1</code>, <code>2-4</code>, <code>1, 5, 9-11</code>.</li>
+<li>Click <strong>Remove pages</strong>. The result is saved as <code>yourfile-pages-removed.pdf</code>, and the tool reports how many pages were removed.</li>
+<li>Open the new file and confirm both what is gone and what is left.</li>
+</ol>
+
+<h2>Rules the tool applies</h2>
+<p>At least one page must remain, so you cannot remove everything. A page number outside the document, such as 12 in a 10-page file, returns an error instead of being ignored, and a typo such as a letter in the box is flagged. If a page is listed twice, it is only counted once. The order of the remaining pages is not changed. Your original file is never modified, because the output is a new document.</p>
+
+<h2>A useful method for scanned documents</h2>
+<p>Scanned stacks often produce a repeating pattern, for example a blank back side for every sheet. Before typing a long list, look at the pattern: if sheets are scanned double-sided and every back is blank, the blank pages are the even-numbered ones, so you would enter <code>2, 4, 6, 8</code> and so on. Check one or two pages by eye to confirm the pattern holds for the whole file. A page that looks blank may contain faint writing or a footer, so glance at each one if the content matters.</p>
+
+<h2>Removing a page is not the same as redacting information</h2>
+<p>When a page is removed, it is gone from the document's page list. But information on the pages you keep is untouched, and metadata such as the title or author remains, so the document may still reveal more than you intend. If you are deleting a page for confidentiality reasons, also check the remaining pages for references to it, and read <a href="pdf-privacy-before-sharing.html">what to check before sharing a PDF</a>. For information inside a kept page, removing the page is the only reliable option; covering text with a shape or cropping the page does not delete it.</p>
+
+<h2>Common mistakes</h2>
+<ul>
+<li><strong>Deleting the wrong pages because the numbers shifted.</strong> Always use the original numbering in a single run. Do not remove page 3, then think of the old page 7 as page 6 and run the tool again.</li>
+<li><strong>Removing a page that other pages refer to.</strong> A contents page or a "see page 14" reference may no longer match.</li>
+<li><strong>Skipping the final check.</strong> Look at the pages on either side of every removal.</li>
+<li><strong>Overwriting your source.</strong> Name the new file clearly, such as "contract-clean.pdf".</li>
+</ul>
+
+<h2>Quality and limits</h2>
+<p>Pages that remain are copied without being re-rendered, so there is no quality loss and text stays selectable. The file normally becomes smaller, in proportion to what you removed. Encrypted files that need a password to open cannot be processed. Very large files depend on your browser's memory; if it struggles, remove pages in two stages. If you also need to renumber the pages, add numbers after removal, using the <a href="reorder-pdf-pages-guide.html">reorder guide</a> if the order needs fixing as well.</p>
+
+<h2>A realistic example</h2>
+<p>You merged three documents and the result is 31 pages. Pages 1 and 12 are cover sheets from the second and third documents, and page 20 is a blank back. Type <code>1, 12, 20</code> and run the tool. You will end up with 28 pages. Then scroll to the places where the removals happened and confirm that the sections flow sensibly. If the cover sheets carried page numbers, you may want to renumber the document afterwards so no gaps appear.</p>
+
+<h2>Short FAQ</h2>
+<h3>Can I undo a removal?</h3>
+<p>Not in the new file, but your original is unchanged, so start again from that.</p>
+<h3>Can I remove the last page without knowing the total?</h3>
+<p>Open-ended ranges work in this tool, so a range such as <code>10-</code> selects page 10 to the end.</p>
+<h3>Will the file be smaller?</h3>
+<p>Usually, but not always by much if the removed pages were nearly blank.</p>
+</main><footer>© 2026 PDF Engine · Practical guides for browser-based file tools.</footer></body></html>

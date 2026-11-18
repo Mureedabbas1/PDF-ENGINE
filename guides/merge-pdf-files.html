@@ -26,4 +26,55 @@ main{padding-top:34px;padding-bottom:48px}h1,h2,h3{line-height:1.25}h1{font-size
 <style id="mobile-fixes">@media (max-width:640px){html{overflow-x:clip;-webkit-text-size-adjust:100%}body{overflow-wrap:anywhere}input,select,textarea{font-size:16px;max-width:100%}input[type=file]{width:100%;box-sizing:border-box}img,video,canvas{max-width:100%}img{height:auto}footer a,nav a,header a,.footer a{padding-block:10px}button,.btn,.cta,[role=button]{min-height:40px}}</style>
 <link rel="icon" type="image/svg+xml" href="/logo.svg">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "url": "https://pdfengine.site/guides/merge-pdf-files.html", "headline": "How to Merge PDF Files", "description": "Learn how to combine PDF documents, arrange the order, and verify the final merged file.", "inLanguage": "en", "isPartOf": {"@type": "WebSite", "name": "PDF Engine", "url": "https://pdfengine.site/"}, "publisher": {"@type": "Organization", "name": "PDF Engine", "url": "https://pdfengine.site/"}, "mainEntityOfPage": "https://pdfengine.site/guides/merge-pdf-files.html"}</script>
-<link rel="stylesheet" href="/mobile.css?v=20261108"></head><body><header><a class="brand" href="https://pdfengine.site/">PDF Engine</a><nav><a href="https://pdfengine.site/">Home &amp; Tools</a><a href="https://pdfengine.site/guides/">Guides</a><a href="https://pdfengine.site/about.html">About</a><a href="https://pdfengine.site/contact.html">Contact</a><a href="https://pdfengine.site/privacy.html">Privacy</a><a href="https://pdfengine.site/terms.html">Terms</a></nav></header><main><h1>How to Merge PDF Files</h1><p>Merging PDFs is useful when a report, application, set of invoices, or scanned document has been saved as several separate files. Combining them can make the result easier to review and share, but it is worth preparing the files before you merge.</p><h2>Before you start</h2><ol><li>Find every PDF that belongs in the final document.</li><li>Rename files or make a short list so the intended order is clear.</li><li>Open each file and confirm it is the correct version, especially if it contains signatures or updated pages.</li></ol><h2>Merge the documents</h2><ol><li>Open the <a href="../index.html#/merge-pdf">Merge PDF tool</a>.</li><li>Select at least two PDF files from your device.</li><li>Use the move-up and move-down controls to arrange the order.</li><li>Run the merge and download the new PDF.</li></ol><h2>Check the result</h2><p>Open the merged file and inspect the first and last pages of each source document. Check page orientation, blank pages, page count and any forms or signatures that matter to your workflow. Keep the original PDFs until you have confirmed the combined file is complete.</p><h2>Privacy and limitations</h2><p>PDF Engine's merge operation is designed to process files in the browser instead of uploading them to a document-processing server. Your browser still downloads the JavaScript libraries needed for the tool. Very large, encrypted or unusual PDFs may fail, and some advanced interactive features may not be preserved by every PDF library. If a document is sensitive or legally important, verify the result in a trusted PDF reader before using it.</p><h2>Try it</h2><p>Use <a href="../index.html#/merge-pdf">Merge PDF</a> to combine supported documents. For a few pages from a large file, the <a href="../index.html#/split-pdf">Split PDF tool</a> may be a better fit.</p></main><footer>© 2026 PDF Engine · Browser-based tools. Always keep an original copy of important files.</footer></body></html>
+<link rel="stylesheet" href="/mobile.css?v=20261108"></head><body><header><a class="brand" href="https://pdfengine.site/">PDF Engine</a><nav><a href="https://pdfengine.site/">Home &amp; Tools</a><a href="https://pdfengine.site/guides/">Guides</a><a href="https://pdfengine.site/about.html">About</a><a href="https://pdfengine.site/contact.html">Contact</a><a href="https://pdfengine.site/privacy.html">Privacy</a><a href="https://pdfengine.site/terms.html">Terms</a></nav></header><main><h1>How to Merge PDF Files</h1><p>Merging PDFs sounds trivial until you open the combined file and find the cover letter on page nine, a landscape invoice lying on its side, and two copies of the same receipt. Most of those problems are decided before you press the button. This guide covers when merging is the right move, how the PDF Engine merge tool behaves, and what to check afterwards.</p>
+
+<h2>When merging is the right tool</h2>
+<p>Merge when the recipient expects a single document: a job application with a CV, cover letter and certificates, a month of invoices for an accountant, a scanned contract that your scanner saved as one file per sheet, or a report whose chapters were written by different people. Do not merge when the files serve different audiences. A client does not need your internal cost sheet stapled to the quote, and an upload form that asks for "ID" and "proof of address" separately usually wants two files.</p>
+
+<h2>Prepare the files first</h2>
+<ol>
+<li><strong>Collect the right versions.</strong> Search your downloads folder for "final", "final2" and "signed". Merge the one you actually mean to send.</li>
+<li><strong>Name files so they sort in the intended order.</strong> Prefixes such as 01-cover, 02-cv, 03-certificates make the order obvious when the files are added to the tool.</li>
+<li><strong>Check each file opens.</strong> A PDF that asks for a password or that your viewer reports as damaged will not merge cleanly.</li>
+<li><strong>Decide on page orientation.</strong> If one source file has sideways scans, fix it with the <a href="../index.html#/rotate-pdf">Rotate PDF tool</a> before or after merging.</li>
+</ol>
+
+<h2>Step by step with the merge tool</h2>
+<ol>
+<li>Open the <a href="../index.html#/merge-pdf">Merge PDF tool</a>.</li>
+<li>Drop two or more PDF files onto the page, or click to choose them. The tool needs at least two.</li>
+<li>Use the move up and move down controls to put the files in order. Files are joined from top to bottom, and every page of the first file comes before any page of the second.</li>
+<li>Click <strong>Merge PDFs</strong>. The tool reports the total page count and file size, and downloads a file called <code>merged.pdf</code>.</li>
+<li>Rename the file straight away. "merged.pdf" tells the recipient nothing, and it is easy to overwrite the next merge.</li>
+</ol>
+
+<h2>What the merge does and does not do</h2>
+<p>The tool copies pages from each source into a new document, so text stays selectable and images are not recompressed. Nothing is rasterized, which means the combined file is roughly the sum of the inputs. Pages keep their own sizes: if you merge an A4 report with a US Letter scan, the result contains both sizes, and they will look slightly different when printed. Document-level extras such as bookmarks, an existing table of contents link structure or form-field behaviour may not carry over, because pages are copied rather than whole documents. If a source relies on internal links, test them in the result.</p>
+
+<h2>Common mistakes</h2>
+<ul>
+<li><strong>Merging before cleaning up.</strong> Blank back pages and duplicate sheets are easier to remove from the individual files, or afterwards with <a href="../index.html#/remove-pdf-pages">Remove Pages</a>, than to notice at the end.</li>
+<li><strong>Trusting the page count.</strong> A correct total does not prove the right files went in. Scroll through the whole result once.</li>
+<li><strong>Merging signed documents and expecting the signature to survive.</strong> A digital signature protects a specific file. Copying its pages into a new document produces a new file, so treat the merged copy as unsigned and keep the signed original as the record.</li>
+<li><strong>Forgetting file size.</strong> A dozen phone scans can easily produce a PDF too large for an email attachment. See <a href="prepare-pdf-for-email-and-upload.html">preparing a PDF for email and upload limits</a>.</li>
+<li><strong>Deleting the originals.</strong> Keep them until the recipient has confirmed receipt.</li>
+</ul>
+
+<h2>Quality and limits</h2>
+<p>Because processing happens in your browser, the practical limit is your device's memory rather than a fixed number of files. A handful of ordinary documents merges in seconds on a laptop. Merging many hundreds of pages of high-resolution scans on an older phone can be slow or fail, and merging in two stages (for example, one chapter at a time) is more reliable. Encrypted files that require a password to open are not something the tool can unlock. If a file fails, open it in your usual PDF reader and use its print-to-PDF option to create a clean copy, then try again.</p>
+
+<h2>Check the result</h2>
+<p>Look at the first and last page of every original inside the merged file. Confirm that orientation is consistent, that no page is blank by accident, and that page numbers or headers still read sensibly. If the combined document should be numbered, add numbers after merging, not before, so they run continuously.</p>
+
+<h2>A realistic example</h2>
+<p>Suppose you are sending a rental application: a one-page cover letter exported from a word processor, two scanned pay slips, a photo of your ID and a bank statement downloaded from your bank. Name them 01 to 05, convert the photo to a PDF first, and merge. Because the sources are a mix of text and scanned pages, the result is a mix too, and that is fine. If the total is too large, compress it at the end, not before merging, so you handle the whole file once. And if the landlord asks for the documents "in the following order", write that order down before you open the tool; it costs nothing and prevents a second merge.</p>
+
+<h2>Short FAQ</h2>
+<h3>Can I merge more than two files at once?</h3>
+<p>Yes. Add as many as you like and arrange them in the list.</p>
+<h3>Can I merge only some pages of a file?</h3>
+<p>Extract those pages first with <a href="../index.html#/extract-pages">Extract Pages</a>, then merge the extracts.</p>
+<h3>Does merging change the content of my pages?</h3>
+<p>No. Pages are copied as they are. Only their position in the new document changes.</p>
+<p>Related guides: <a href="reorder-pdf-pages-guide.html">reorder PDF pages</a>, <a href="split-pdf-pages.html">split PDF pages</a> and the <a href="assemble-clean-multi-page-pdf.html">checklist for assembling a clean multi-page document</a>.</p>
+</main><footer>© 2026 PDF Engine · Browser-based tools. Always keep an original copy of important files.</footer></body></html>

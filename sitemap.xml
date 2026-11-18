@@ -1,16 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://pdfengine.site/</loc><lastmod>2026-10-30</lastmod></url>
+  <url><loc>https://pdfengine.site/</loc><lastmod>2026-11-18</lastmod></url>
   <url><loc>https://pdfengine.site/about.html</loc><lastmod>2026-10-30</lastmod></url>
   <url><loc>https://pdfengine.site/contact.html</loc><lastmod>2026-10-30</lastmod></url>
   <url><loc>https://pdfengine.site/privacy.html</loc><lastmod>2026-10-30</lastmod></url>
   <url><loc>https://pdfengine.site/terms.html</loc><lastmod>2026-10-30</lastmod></url>
   <url><loc>https://pdfengine.site/faq.html</loc><lastmod>2026-10-30</lastmod></url>
-  <url><loc>https://pdfengine.site/guides/</loc><lastmod>2026-10-30</lastmod></url>
-  <url><loc>https://pdfengine.site/guides/merge-pdf-files.html</loc><lastmod>2026-10-30</lastmod></url>
-  <url><loc>https://pdfengine.site/guides/split-pdf-pages.html</loc><lastmod>2026-10-30</lastmod></url>
-  <url><loc>https://pdfengine.site/guides/compress-pdf.html</loc><lastmod>2026-10-30</lastmod></url>
+  <url><loc>https://pdfengine.site/guides/</loc><lastmod>2026-11-18</lastmod></url>
+  <url><loc>https://pdfengine.site/guides/merge-pdf-files.html</loc><lastmod>2026-11-18</lastmod></url>
+  <url><loc>https://pdfengine.site/guides/split-pdf-pages.html</loc><lastmod>2026-11-18</lastmod></url>
+  <url><loc>https://pdfengine.site/guides/compress-pdf.html</loc><lastmod>2026-11-18</lastmod></url>
   <url><loc>https://pdfengine.site/guides/pdf-to-jpg.html</loc><lastmod>2026-10-30</lastmod></url>
+  <url><loc>https://pdfengine.site/guides/prepare-pdf-for-email-and-upload.html</loc><lastmod>2026-11-18</lastmod></url>
+  <url><loc>https://pdfengine.site/guides/scanned-vs-text-pdf.html</loc><lastmod>2026-11-18</lastmod></url>
+  <url><loc>https://pdfengine.site/guides/pdf-privacy-before-sharing.html</loc><lastmod>2026-11-18</lastmod></url>
+  <url><loc>https://pdfengine.site/guides/assemble-clean-multi-page-pdf.html</loc><lastmod>2026-11-18</lastmod></url>
   <url><loc>https://pdfengine.site/tools/</loc><lastmod>2026-10-30</lastmod></url>
   <url><loc>https://pdfengine.site/tools/merge-pdf.html</loc><lastmod>2026-10-30</lastmod></url>
   <url><loc>https://pdfengine.site/tools/split-pdf.html</loc><lastmod>2026-10-30</lastmod></url>
@@ -33,19 +37,19 @@
   <url><loc>https://pdfengine.site/tools/flatten-pdf-form.html</loc><lastmod>2026-10-30</lastmod></url>
   <url><loc>https://pdfengine.site/tools/edit-pdf-metadata.html</loc><lastmod>2026-10-30</lastmod></url>
   <url><loc>https://pdfengine.site/tools/qr-code-generator.html</loc><lastmod>2026-10-31</lastmod></url>
-  <url><loc>https://pdfengine.site/guides/jpg-to-pdf-guide.html</loc><lastmod>2026-10-30</lastmod></url>
-  <url><loc>https://pdfengine.site/guides/rotate-pdf-guide.html</loc><lastmod>2026-10-30</lastmod></url>
+  <url><loc>https://pdfengine.site/guides/jpg-to-pdf-guide.html</loc><lastmod>2026-11-18</lastmod></url>
+  <url><loc>https://pdfengine.site/guides/rotate-pdf-guide.html</loc><lastmod>2026-11-18</lastmod></url>
   <url><loc>https://pdfengine.site/guides/add-page-numbers-guide.html</loc><lastmod>2026-10-30</lastmod></url>
-  <url><loc>https://pdfengine.site/guides/add-watermark-guide.html</loc><lastmod>2026-10-30</lastmod></url>
+  <url><loc>https://pdfengine.site/guides/add-watermark-guide.html</loc><lastmod>2026-11-18</lastmod></url>
   <url><loc>https://pdfengine.site/guides/word-counter-guide.html</loc><lastmod>2026-10-30</lastmod></url>
   <url><loc>https://pdfengine.site/guides/age-calculator-guide.html</loc><lastmod>2026-10-30</lastmod></url>
   <url><loc>https://pdfengine.site/guides/image-compressor-guide.html</loc><lastmod>2026-10-30</lastmod></url>
   
-  <url><loc>https://pdfengine.site/guides/extract-pdf-pages-guide.html</loc><lastmod>2026-10-30</lastmod></url>
-  <url><loc>https://pdfengine.site/guides/remove-pdf-pages-guide.html</loc><lastmod>2026-10-30</lastmod></url>
-  <url><loc>https://pdfengine.site/guides/reorder-pdf-pages-guide.html</loc><lastmod>2026-10-30</lastmod></url>
+  <url><loc>https://pdfengine.site/guides/extract-pdf-pages-guide.html</loc><lastmod>2026-11-18</lastmod></url>
+  <url><loc>https://pdfengine.site/guides/remove-pdf-pages-guide.html</loc><lastmod>2026-11-18</lastmod></url>
+  <url><loc>https://pdfengine.site/guides/reorder-pdf-pages-guide.html</loc><lastmod>2026-11-18</lastmod></url>
   <url><loc>https://pdfengine.site/guides/pdf-to-text-guide.html</loc><lastmod>2026-10-30</lastmod></url>
-  <url><loc>https://pdfengine.site/guides/crop-pdf-guide.html</loc><lastmod>2026-10-30</lastmod></url>
+  <url><loc>https://pdfengine.site/guides/crop-pdf-guide.html</loc><lastmod>2026-11-18</lastmod></url>
   <url><loc>https://pdfengine.site/guides/grayscale-pdf-guide.html</loc><lastmod>2026-10-30</lastmod></url>
   <url><loc>https://pdfengine.site/guides/flatten-pdf-form-guide.html</loc><lastmod>2026-10-30</lastmod></url>
   <url><loc>https://pdfengine.site/guides/edit-pdf-metadata-guide.html</loc><lastmod>2026-10-30</lastmod></url>

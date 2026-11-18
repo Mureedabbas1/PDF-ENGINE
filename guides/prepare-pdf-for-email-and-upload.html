@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en"><head>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6162822251101594" crossorigin="anonymous"></script>
+<meta name="google-adsense-account" content="ca-pub-6162822251101594">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Prepare a PDF for Email and Upload Limits | PDF Engine</title><meta name="description" content="Why PDFs get too big for email and upload forms, how to find the cause, and the practical ways to shrink or split a file without ruining it.">
+<link rel="canonical" href="https://pdfengine.site/guides/prepare-pdf-for-email-and-upload.html"><meta name="robots" content="index,follow">
+<style>
+:root{color-scheme:dark;--bg:#080d1a;--panel:#111a31;--text:#eef4ff;--muted:#b7c4d8;--link:#79e9df}
+*{box-sizing:border-box}body{margin:0;background:linear-gradient(160deg,#080d1a,#10163a);color:var(--text);font:16px/1.8 system-ui,-apple-system,Segoe UI,sans-serif}
+header,main,footer{max-width:900px;margin:auto;padding:22px}header{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;border-bottom:1px solid #34415a}
+.brand{font-weight:800;font-size:1.25rem;color:white;text-decoration:none}nav{display:flex;gap:16px;flex-wrap:wrap}a{color:var(--link)}nav a{color:var(--muted);text-decoration:none}
+main{padding-top:34px;padding-bottom:48px}h1,h2,h3{line-height:1.25}h1{font-size:clamp(2rem,5vw,3rem)}h2{margin-top:32px}p,li{color:var(--muted)}.panel{background:var(--panel);border:1px solid #34415a;border-radius:18px;padding:22px;margin:18px 0}.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}.cards a{display:block;background:var(--panel);border:1px solid #34415a;border-radius:16px;padding:18px;text-decoration:none}.cards h2{margin:0 0 8px;font-size:1.15rem}.cards p{margin-bottom:0}footer{border-top:1px solid #34415a;color:var(--muted);font-size:.9rem}
+</style><meta property="og:type" content="website">
+<meta property="og:site_name" content="PDF Engine">
+<meta property="og:title" content="Prepare a PDF for Email and Upload Limits | PDF Engine">
+<meta property="og:description" content="Why PDFs get too big for email and upload forms, how to find the cause, and the practical ways to shrink or split a file without ruining it.">
+<meta property="og:url" content="https://pdfengine.site/guides/prepare-pdf-for-email-and-upload.html">
+<meta property="og:image" content="https://pdfengine.site/og-image.png">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="PDF Engine free online PDF tools">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Prepare a PDF for Email and Upload Limits | PDF Engine">
+<meta name="twitter:description" content="Why PDFs get too big for email and upload forms, how to find the cause, and the practical ways to shrink or split a file without ruining it.">
+<meta name="twitter:image" content="https://pdfengine.site/og-image.png">
+<style id="mobile-fixes">@media (max-width:640px){html{overflow-x:clip;-webkit-text-size-adjust:100%}body{overflow-wrap:anywhere}input,select,textarea{font-size:16px;max-width:100%}input[type=file]{width:100%;box-sizing:border-box}img,video,canvas{max-width:100%}img{height:auto}footer a,nav a,header a,.footer a{padding-block:10px}button,.btn,.cta,[role=button]{min-height:40px}}</style>
+<link rel="icon" type="image/svg+xml" href="/logo.svg">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "datePublished": "2026-11-18", "dateModified": "2026-11-18", "url": "https://pdfengine.site/guides/prepare-pdf-for-email-and-upload.html", "headline": "Prepare a PDF for Email and Upload Limits", "description": "Why PDFs get too big for email and upload forms, how to find the cause, and the practical ways to shrink or split a file without ruining it.", "inLanguage": "en", "isPartOf": {"@type": "WebSite", "name": "PDF Engine", "url": "https://pdfengine.site/"}, "publisher": {"@type": "Organization", "name": "PDF Engine", "url": "https://pdfengine.site/"}, "mainEntityOfPage": "https://pdfengine.site/guides/prepare-pdf-for-email-and-upload.html"}</script>
+<link rel="stylesheet" href="/mobile.css?v=20261108"></head><body><header><a class="brand" href="https://pdfengine.site/">PDF Engine</a><nav><a href="https://pdfengine.site/">Home &amp; Tools</a><a href="https://pdfengine.site/guides/">Guides</a><a href="https://pdfengine.site/about.html">About</a><a href="https://pdfengine.site/contact.html">Contact</a><a href="https://pdfengine.site/privacy.html">Privacy</a><a href="https://pdfengine.site/terms.html">Terms</a></nav></header><main><h1>Prepare a PDF for Email and Upload Limits</h1><p>The message is always the same: "File too large", "Attachment exceeds the limit", or an upload bar that gets to the end and then fails. Fixing it is usually quick, but the right fix depends on why the file is big. Squeezing a small text document harder will not help, while a stack of phone photos can shrink to a tenth of its size. This article walks through diagnosis first and tools second.</p>
+
+<h2>Know the limit you are dealing with</h2>
+<p>Limits differ by service, and they change, so check the one that applies to you. Many email providers cap attachments at around 20 to 25 MB, and some corporate or older systems allow much less. Government and university portals often set their own limits, sometimes as low as 2 MB per file, and sometimes per page count as well. There is one extra detail with email: attachments are encoded for transport, which makes them roughly a third larger than the file on your disk. A 19 MB PDF can therefore be refused by a 25 MB mailbox. Aim to finish with a comfortable margin rather than a file that only just fits.</p>
+
+<h2>Find out what makes the file big</h2>
+<p>A PDF's size comes mostly from images. Pages of plain text, even hundreds of them, are usually small, often under a megabyte. A PDF made from scans or photos is large because each page is a full-resolution picture. A quick way to tell: open the file and try to select a sentence. If you cannot, the pages are images and the size is the sum of those images. If you can, the weight is likely embedded photographs, logos or fonts. <a href="scanned-vs-text-pdf.html">Scanned vs text PDFs</a> explains this distinction in depth, because it changes what every tool does.</p>
+<p>Also look at the page count. A file of 300 pages at 100 KB each is 30 MB without anything being wrong with it. In that case, reducing the number of pages or sending in parts beats compression.</p>
+
+<h2>Options, from least to most destructive</h2>
+<ol>
+<li><strong>Remove what nobody needs.</strong> Blank pages, duplicate sheets and cover pages are free savings. Use <a href="../index.html#/remove-pdf-pages">Remove Pages</a>. This changes nothing about the quality of the pages that remain.</li>
+<li><strong>Send only the relevant part.</strong> If the recipient asked for the signed page and the schedule, extract those with <a href="../index.html#/extract-pages">Extract Pages</a> rather than sending the whole contract.</li>
+<li><strong>Split into parts.</strong> When all pages are needed, break the file into two or three numbered parts with <a href="../index.html#/split-pdf">Split PDF</a> and send them in separate messages. Say in the message that there are several parts.</li>
+<li><strong>Shrink the images in the PDF.</strong> Use <a href="../index.html#/compress-pdf">Compress PDF</a>. It re-renders each page as a JPEG at a lower resolution. It is effective on scans and photographs but turns text into pictures, so the result cannot be searched or copied.</li>
+<li><strong>Convert to grayscale.</strong> A colour scan of a black-and-white form carries colour it does not need. The <a href="../index.html#/grayscale-pdf">grayscale tool</a> also re-renders pages as images, so the same trade-off applies, with a more modest saving.</li>
+<li><strong>Start from smaller images.</strong> If you are about to create a PDF from photos, shrink the photos first with the Image Compressor, then convert them with <a href="../index.html#/jpg-to-pdf">JPG to PDF</a>. This usually gives a better result than compressing a finished PDF.</li>
+</ol>
+
+<h2>Understanding the quality trade-off</h2>
+<p>PDF Engine's compressor offers three levels, with the lighter levels using higher resolution and image quality and the heaviest dropping to roughly screen resolution. For a document that will be read on screen, Balanced is normally readable. For something that will be printed, use Light and print one page as a test. Small text such as the footnotes of a contract or a number on a receipt is what gets hard to read first, so zoom in on the smallest text of the result before you send it. Run the compressor on the original every time; compressing an already compressed file stacks the loss without saving much more.</p>
+
+<h2>Check the result before you send</h2>
+<ul>
+<li>Look at the file size in your file manager, not only in the tool's summary.</li>
+<li>Open the file and look at pages with fine print, stamps and signatures.</li>
+<li>Check the page count against the original.</li>
+<li>Give the file a clear name: surname-application-form.pdf, not scan0023.pdf.</li>
+<li>Confirm that the file does not contain more than you meant to send; the <a href="pdf-privacy-before-sharing.html">privacy checklist</a> takes two minutes.</li>
+</ul>
+
+<h2>When the portal still says no</h2>
+<p>If the file is under the stated size and still fails, the reason is often not size at all. Some systems reject filenames with spaces or accented characters, files that contain forms or signatures, or PDFs that are not "text searchable" because they require OCR. Try a short plain filename made of letters, digits and hyphens. If a system demands searchable text and your file is a scan, compression will not help; you need the original text version or an OCR step, which PDF Engine does not offer.</p>
+
+<h2>A sensible workflow in short</h2>
+<p>First delete what is not needed. Then extract or split if only part is required. Only if the file is still too large, compress it, starting at Balanced, and judge the result by looking at it. Keep the original in a safe folder in case the recipient asks for the high-quality version. Compress last, after merging, ordering and numbering, so you do the lossy step once. The <a href="assemble-clean-multi-page-pdf.html">checklist for assembling a multi-page document</a> sets out that order.</p>
+
+<h2>Splitting well</h2>
+<p>If you must send a document in parts, split at natural boundaries such as chapters or sections instead of exactly in the middle of a table. Name the parts "report-part-1-of-3.pdf" and so on, and mention the number of parts in your message so the recipient knows when everything has arrived. Check that each part opens on its own and ends with a complete page of content.</p>
+
+<h2>Short FAQ</h2>
+<h3>Is it safe to compress a document with personal data?</h3>
+<p>The compressor runs in your browser and does not upload the file, but you still choose who receives the result.</p>
+<h3>Can I reach a specific size such as 1 MB?</h3>
+<p>The tool has no target-size setting. Try the three levels in turn and check the outcome.</p>
+<h3>Why did the file get bigger?</h3>
+<p>Text-based PDFs are already compact, and turning them into images can increase the size. The tool warns you and does not offer the larger file.</p>
+</main><footer>© 2026 PDF Engine · Browser-based tools. Always keep an original copy of important files.</footer></body></html>

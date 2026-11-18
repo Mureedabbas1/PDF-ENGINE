@@ -26,4 +26,54 @@ main{padding-top:34px;padding-bottom:48px}h1,h2,h3{line-height:1.25}h1{font-size
 <style id="mobile-fixes">@media (max-width:640px){html{overflow-x:clip;-webkit-text-size-adjust:100%}body{overflow-wrap:anywhere}input,select,textarea{font-size:16px;max-width:100%}input[type=file]{width:100%;box-sizing:border-box}img,video,canvas{max-width:100%}img{height:auto}footer a,nav a,header a,.footer a{padding-block:10px}button,.btn,.cta,[role=button]{min-height:40px}}</style>
 <link rel="icon" type="image/svg+xml" href="/logo.svg">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "url": "https://pdfengine.site/guides/split-pdf-pages.html", "headline": "How to Split PDF Pages", "description": "A practical guide to extracting selected pages or saving each PDF page separately.", "inLanguage": "en", "isPartOf": {"@type": "WebSite", "name": "PDF Engine", "url": "https://pdfengine.site/"}, "publisher": {"@type": "Organization", "name": "PDF Engine", "url": "https://pdfengine.site/"}, "mainEntityOfPage": "https://pdfengine.site/guides/split-pdf-pages.html"}</script>
-<link rel="stylesheet" href="/mobile.css?v=20261108"></head><body><header><a class="brand" href="https://pdfengine.site/">PDF Engine</a><nav><a href="https://pdfengine.site/">Home &amp; Tools</a><a href="https://pdfengine.site/guides/">Guides</a><a href="https://pdfengine.site/about.html">About</a><a href="https://pdfengine.site/contact.html">Contact</a><a href="https://pdfengine.site/privacy.html">Privacy</a><a href="https://pdfengine.site/terms.html">Terms</a></nav></header><main><h1>How to Split PDF Pages</h1><p>Splitting a PDF helps when you need only a few pages from a long report, want to share one invoice, or need each page as its own document. First decide whether you need a selection of pages or a separate file for every page.</p><h2>Choose the right split method</h2><ul><li><strong>Extract selected pages:</strong> best for a chapter, receipt, signed page or a small group of pages.</li><li><strong>Separate every page:</strong> useful when each page must be delivered independently. The tool packages the results into a ZIP file.</li></ul><h2>Extract a selection</h2><ol><li>Open the <a href="../index.html#/split-pdf">Split PDF tool</a>.</li><li>Choose the source PDF from your device.</li><li>Enter page ranges such as <code>1-3, 5, 8-</code>. Commas separate selections and a dash specifies a range.</li><li>Run the tool and download the new PDF or ZIP file.</li></ol><h2>Verify the output</h2><p>Open the downloaded file and check that the expected pages are present and in the right order. Page numbering printed on a page may differ from the PDF viewer's page index, so compare both when working with reports that have cover pages or front matter.</p><h2>Privacy and limitations</h2><p>The tool is designed to process supported files in your browser. Your browser downloads third-party code libraries to run the operation, but the file is not intentionally uploaded to a PDF Engine server. Encrypted, damaged or unusually complex PDFs may not work. Always keep the source file until the extracted result has been checked.</p><p>Use <a href="../index.html#/split-pdf">Split PDF</a> to begin, or read the <a href="merge-pdf-files.html">merge guide</a> if you need to combine several documents first.</p></main><footer>© 2026 PDF Engine · Browser-based tools. Always keep an original copy of important files.</footer></body></html>
+<link rel="stylesheet" href="/mobile.css?v=20261108"></head><body><header><a class="brand" href="https://pdfengine.site/">PDF Engine</a><nav><a href="https://pdfengine.site/">Home &amp; Tools</a><a href="https://pdfengine.site/guides/">Guides</a><a href="https://pdfengine.site/about.html">About</a><a href="https://pdfengine.site/contact.html">Contact</a><a href="https://pdfengine.site/privacy.html">Privacy</a><a href="https://pdfengine.site/terms.html">Terms</a></nav></header><main><h1>How to Split PDF Pages</h1><p>A 200-page report rarely needs to travel as one file. Someone only wants chapter three, a printer needs the pages separately, or an upload form accepts a maximum of ten pages. Splitting is the answer in all of those cases, and the PDF Engine split tool offers two ways of doing it.</p>
+
+<h2>When to split a PDF</h2>
+<ul>
+<li>You need to send only part of a large document, such as one section of a contract.</li>
+<li>A portal limits file size or page count, and the whole file is over the limit.</li>
+<li>A scanned batch contains several different documents that should be filed separately.</li>
+<li>You want each page as its own file, for example to attach individual receipts to expense lines.</li>
+</ul>
+<p>If you only want one block of pages saved as a new document, <a href="../index.html#/extract-pages">Extract Pages</a> does the same job with a simpler screen. Choose split when you also want the one-file-per-page option.</p>
+
+<h2>The two modes</h2>
+<p><strong>Extract pages</strong> takes a page range and writes a single new PDF containing just those pages. <strong>Every page as separate PDF</strong> creates one PDF per page and delivers them together in a ZIP archive. The ZIP is built in your browser, so a 40-page document produces 40 small files in one download, named after the original with the page number added.</p>
+
+<h2>Step by step</h2>
+<ol>
+<li>Open the <a href="../index.html#/split-pdf">Split PDF tool</a> and add your PDF.</li>
+<li>Pick a mode. For a partial document, leave <strong>Extract pages</strong> selected.</li>
+<li>Type the pages you want in the range box. Examples: <code>1-3</code> for the first three pages, <code>1-3, 5</code> for those plus page five, <code>8-</code> for page eight to the end.</li>
+<li>Click <strong>Split PDF</strong>. The result shows how many of the total pages were extracted and downloads as <code>yourfile-extracted.pdf</code>, or as a ZIP in the per-page mode.</li>
+</ol>
+
+<h2>How the page ranges are read</h2>
+<p>Numbers are separated by commas and ranges use a hyphen. An open end such as <code>8-</code> means "to the last page". Typing <code>all</code> or leaving the box empty selects every page. If you type a range backwards, like <code>5-3</code>, the tool treats it as 3 to 5. Pages mentioned twice are included once. A page number larger than the document, or a typo such as <code>1..3</code>, produces an error message instead of a half-correct file, which is better than silently dropping pages. When extracting, the pages are written in the order you list them, so <code>5, 1-2</code> yields page five first.</p>
+
+<h2>Common mistakes</h2>
+<ul>
+<li><strong>Counting printed page numbers instead of PDF page numbers.</strong> If a book starts its numbering after a cover and contents pages, "page 1" in print may be page 7 in the file. The tool counts physical pages from the first one.</li>
+<li><strong>Expecting the original to change.</strong> Splitting never edits your source file. Delete or archive it yourself if you no longer need it.</li>
+<li><strong>Splitting a signed or protected document and treating the pieces as signed.</strong> The pieces are new files.</li>
+<li><strong>Not checking where a section ends.</strong> A chapter's last paragraph sometimes spills onto the next page. Open the result and read the final page.</li>
+</ul>
+
+<h2>Quality and limits</h2>
+<p>Split copies the selected pages without recompressing them, so text stays sharp and selectable. File size drops roughly in proportion to the pages kept, though shared resources such as fonts can make a small extract a little larger than you expect. Very large files depend on your device memory. For encrypted PDFs that need a password, the tool cannot help. In per-page mode, remember that a 500-page file creates 500 files, which is rarely what anyone wants to open; extract a range instead.</p>
+
+<h2>Check the result</h2>
+<p>Open the new file and confirm the page count matches what you typed. Compare the first page against the original to make sure you started where you meant to. If the result is for email or an upload form, check its size and read <a href="prepare-pdf-for-email-and-upload.html">how to get a PDF under upload limits</a>.</p>
+
+<h2>A realistic example</h2>
+<p>You have a 48-page lease with a four-page schedule at the end, and the agent only wants the signed schedule. Open the file, scroll to the schedule, and note that it runs from page 45 to page 48. Choose Extract pages, type <code>45-</code> and run the tool. Because the range is open-ended, it works even if you are unsure whether there are 48 or 49 pages. Name the result "lease-schedule-signed.pdf", open it, and check that the first page is the schedule heading rather than the last page of the main agreement.</p>
+
+<h2>Short FAQ</h2>
+<h3>Can I split by bookmark or by every N pages?</h3>
+<p>Not directly. Type ranges such as <code>1-10</code>, then <code>11-20</code>, and run the tool once for each block.</p>
+<h3>Why is the ZIP not opening on my phone?</h3>
+<p>Some phone file managers need an extra step to unzip. Save it to your device and open it from the Files app, or use a computer.</p>
+<h3>Is anything sent to a server?</h3>
+<p>No. The pages are copied in your browser. See <a href="pdf-privacy-before-sharing.html">PDF privacy before you share</a> for the details.</p>
+<p>Related: <a href="merge-pdf-files.html">merge PDF files</a> and <a href="remove-pdf-pages-guide.html">remove PDF pages</a>.</p>
+</main><footer>© 2026 PDF Engine · Browser-based tools. Always keep an original copy of important files.</footer></body></html>
