@@ -422,6 +422,81 @@ body{background-attachment:scroll}
 .dm-note{position:absolute;left:0;right:0;bottom:12px;text-align:center;font:600 10.5px Outfit,sans-serif;color:rgba(255,255,255,.85)}
 .doc em{font-size:10px}.d1,.d2,.d3{z-index:1}</style>
 <link rel="stylesheet" href="/mobile.css?v=20261108">
+
+<style id="pdf-engine-app-dashboard-v1">
+/* App dashboard refresh — preserves the existing tool markup and processing code */
+:root{--app-line:rgba(148,163,184,.18)}
+body{padding-bottom:86px}
+.nav{max-width:1240px;margin:14px auto 0;border-radius:18px;background:rgba(8,15,35,.82);border:1px solid var(--app-line)}
+[data-theme=light] .nav{background:rgba(255,255,255,.88)}
+.nav-in{min-height:54px}
+.logo-cube{transform:none;border-radius:12px}
+#pdf-app-dashboard{width:min(1180px,calc(100% - 36px));margin:22px auto 8px;padding:24px;border:1px solid var(--app-line);border-radius:26px;background:linear-gradient(125deg,rgba(15,30,61,.94),rgba(13,25,47,.82));box-shadow:0 24px 70px rgba(0,0,0,.22);position:relative;overflow:hidden}
+[data-theme=light] #pdf-app-dashboard{background:linear-gradient(125deg,rgba(255,255,255,.96),rgba(231,242,255,.92))}
+#pdf-app-dashboard:after{content:"";position:absolute;width:280px;height:280px;right:-100px;top:-150px;border-radius:50%;background:rgba(34,211,238,.14);filter:blur(12px);pointer-events:none}
+.pe-dash-top{display:flex;justify-content:space-between;align-items:center;gap:18px;position:relative;z-index:1}
+.pe-dash-kicker{color:var(--cyan);font-size:.78rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase}
+.pe-dash-title{font-size:clamp(1.5rem,3vw,2.15rem);line-height:1.2;margin:5px 0}
+.pe-dash-sub{color:var(--muted);font-size:.92rem}
+.pe-dash-actions{display:flex;gap:10px;flex-wrap:wrap}
+.pe-install{border:1px solid rgba(34,211,238,.42);background:linear-gradient(100deg,var(--cyan),var(--mint));color:#06212b;font-weight:800;border-radius:13px;padding:11px 16px;cursor:pointer}
+.pe-dash-search{display:flex;align-items:center;gap:12px;margin-top:22px;padding:5px 8px 5px 16px;border:1px solid var(--app-line);background:rgba(255,255,255,.07);border-radius:16px;position:relative;z-index:1}
+[data-theme=light] .pe-dash-search{background:rgba(255,255,255,.75)}
+.pe-dash-search span{font-size:1.2rem}
+.pe-dash-search input{width:100%;border:0;outline:0;background:transparent;color:var(--text);font:inherit;padding:10px 0;min-width:0}
+.pe-dash-search input::placeholder{color:var(--muted)}
+.pe-dash-search kbd{white-space:nowrap;color:var(--muted);border:1px solid var(--app-line);padding:4px 8px;border-radius:8px;font-size:.72rem}
+.pe-dash-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:15px;position:relative;z-index:1}
+.pe-dash-stat{padding:12px 15px;border:1px solid var(--app-line);border-radius:15px;background:rgba(255,255,255,.045)}
+.pe-dash-stat b{display:block;font-size:1.05rem}.pe-dash-stat small{color:var(--muted)}
+.hero{padding:34px 0 22px}
+.hero-grid{grid-template-columns:1.2fr .8fr}
+.hero h1{font-size:clamp(2.1rem,4vw,3.45rem)}
+.scene{height:330px;transform:scale(.86)}
+.trust{padding:14px 0 8px}
+.tools-sec{padding-top:30px}
+#tools .sec-head{margin-bottom:22px}
+.cat-tabs{display:flex;gap:9px;overflow-x:auto;padding:6px 2px 14px;scrollbar-width:thin}
+.cat-tab{flex:0 0 auto;border:1px solid var(--app-line);border-radius:999px;padding:9px 15px;background:rgba(255,255,255,.055);color:var(--muted);font:600 .88rem inherit;cursor:pointer}
+.cat-tab.active{background:linear-gradient(100deg,rgba(34,211,238,.2),rgba(52,211,153,.16));border-color:rgba(34,211,238,.55);color:var(--text)}
+#tool-grid{grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px}
+#tool-grid .tool-card{min-height:190px;padding:20px;border-radius:19px;background:rgba(13,24,48,.68)}
+[data-theme=light] #tool-grid .tool-card{background:rgba(255,255,255,.78)}
+#tool-grid .t-ico{width:48px;height:48px;border-radius:14px;font-size:1.45rem;margin-bottom:12px}
+#tool-grid .tool-card h3{font-size:1.02rem}
+#tool-grid .tool-card p{font-size:.86rem}
+.pe-bottom-nav{position:fixed;z-index:120;bottom:12px;left:50%;transform:translateX(-50%);width:min(520px,calc(100% - 24px));display:flex;justify-content:space-around;gap:5px;padding:8px;border:1px solid rgba(148,163,184,.25);border-radius:19px;background:rgba(7,13,29,.91);backdrop-filter:blur(22px);-webkit-backdrop-filter:blur(22px);box-shadow:0 14px 45px rgba(0,0,0,.4)}
+[data-theme=light] .pe-bottom-nav{background:rgba(255,255,255,.94)}
+.pe-bottom-nav a{display:flex;flex:1;flex-direction:column;align-items:center;gap:2px;padding:5px 3px;border-radius:12px;color:var(--muted);font-size:.7rem;font-weight:700}
+.pe-bottom-nav a span{font-size:1.15rem;line-height:1.25}
+.pe-bottom-nav a:hover,.pe-bottom-nav a.active{color:var(--cyan);background:rgba(34,211,238,.09)}
+#pe-no-results{display:none;text-align:center;padding:28px;color:var(--muted);border:1px dashed var(--app-line);border-radius:16px;margin-top:12px}
+@media(max-width:700px){
+ body{padding-bottom:90px}
+ .nav{width:calc(100% - 20px);margin-top:10px;padding:8px 12px}
+ .nav-links{top:65px}
+ #pdf-app-dashboard{width:calc(100% - 20px);margin:12px auto 0;padding:18px;border-radius:21px}
+ .pe-dash-top{align-items:flex-start;flex-direction:column}
+ .pe-dash-actions{width:100%}.pe-install{width:100%}
+ .pe-dash-stats{grid-template-columns:repeat(3,minmax(0,1fr));gap:7px}
+ .pe-dash-stat{padding:10px 8px}.pe-dash-stat b{font-size:.92rem}.pe-dash-stat small{font-size:.68rem}
+ .pe-dash-search kbd{display:none}
+ .hero{padding:26px 0 12px}
+ .hero-grid{grid-template-columns:1fr}
+ .hero h1{font-size:2.25rem}
+ .scene{display:none}
+ .hero p.lead{font-size:1rem;margin-bottom:20px}
+ .trust{justify-content:flex-start;gap:8px}.trust span{font-size:.78rem;padding:8px 11px}
+ #tool-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+ #tool-grid .tool-card{padding:14px;min-height:180px}
+ #tool-grid .t-ico{width:42px;height:42px;font-size:1.25rem}
+ #tool-grid .tool-card h3{font-size:.93rem}
+ #tool-grid .tool-card p{font-size:.78rem;line-height:1.45}
+ .pe-bottom-nav{bottom:8px}
+}
+@media(max-width:360px){#tool-grid{grid-template-columns:1fr}.pe-dash-title{font-size:1.45rem}}
+</style>
+
 </head>
 <body>
 <div id="pdf-engine-welcome" role="status" aria-label="Welcome to PDF Engine"><div class="pe-welcome-content"><img src="logo.svg" alt="PDF Engine logo"><h1>Welcome to <span>PDF Engine</span></h1><p>20 Free Tools · No Sign-up · Browser-Based</p></div></div>
@@ -436,6 +511,16 @@ body{background-attachment:scroll}
 <span class="badge">&#10024; 100% Free</span>
 <button class="icon-btn" id="theme-btn" type="button" aria-label="Toggle light and dark mode">&#9728;</button>
 </nav></div></header>
+
+<section id="pdf-app-dashboard" aria-label="PDF Engine app dashboard">
+ <div class="pe-dash-top">
+  <div><div class="pe-dash-kicker">Your PDF workspace</div><h2 class="pe-dash-title">What would you like to do today?</h2><p class="pe-dash-sub">Fast, private PDF tools — right in your browser.</p></div>
+  <div class="pe-dash-actions"><button class="pe-install" id="pe-install-app" type="button">＋ Install App</button></div>
+ </div>
+ <label class="pe-dash-search"><span aria-hidden="true">⌕</span><input id="pe-tool-search" type="search" placeholder="Search 20+ tools (e.g. merge, compress, QR)..." autocomplete="off" aria-label="Search PDF tools"><kbd>SEARCH</kbd></label>
+ <div class="pe-dash-stats"><div class="pe-dash-stat"><b>20+ Tools</b><small>Free utilities</small></div><div class="pe-dash-stat"><b>100% Private</b><small>Browser processing</small></div><div class="pe-dash-stat"><b>No Account</b><small>Start instantly</small></div></div>
+</section>
+
 <main><div id="v-home">
 <section class="hero"><div class="container hero-grid">
 <div>
@@ -1241,4 +1326,30 @@ window.PE_DATA.homeTitle=document.title;</script>
 </script>
 
 <script>(function(){var screen=document.getElementById('pdf-engine-welcome');if(!screen)return;var hide=function(){screen.classList.add('is-hidden');};var timer=window.setTimeout(hide,4000);screen.addEventListener('click',function(){window.clearTimeout(timer);hide();});})();</script>
+
+<nav class="pe-bottom-nav" aria-label="App navigation">
+ <a class="active" href="/" aria-label="Home"><span>⌂</span>Home</a>
+ <a href="#tools" aria-label="Tools"><span>▦</span>Tools</a>
+ <a href="#guides" aria-label="Guides"><span>▤</span>Guides</a>
+ <a href="faq.html" aria-label="Help"><span>ⓘ</span>Help</a>
+</nav>
+<script id="pdf-engine-app-dashboard-js">
+(function(){
+ var installPrompt=null, installBtn=document.getElementById('pe-install-app');
+ window.addEventListener('beforeinstallprompt',function(e){e.preventDefault();installPrompt=e;if(installBtn)installBtn.textContent='＋ Install App';});
+ if(installBtn)installBtn.addEventListener('click',async function(){
+  if(!installPrompt){installBtn.textContent='Use browser menu to install';setTimeout(function(){installBtn.textContent='＋ Install App';},2600);return;}
+  installPrompt.prompt();try{await installPrompt.userChoice;}catch(e){}installPrompt=null;
+ });
+ var search=document.getElementById('pe-tool-search');
+ if(search)search.addEventListener('input',function(){
+  var q=search.value.trim().toLowerCase(),cards=document.querySelectorAll('#tool-grid .tool-card'),shown=0;
+  cards.forEach(function(card){var match=!q||card.textContent.toLowerCase().indexOf(q)!==-1;card.style.display=match?'':'none';if(match)shown++;});
+  var empty=document.getElementById('pe-no-results');if(empty)empty.style.display=shown?'none':'block';
+  if(q){document.querySelectorAll('.cat-tab').forEach(function(tab){tab.classList.remove('active');tab.setAttribute('aria-selected','false');});}
+ });
+ var grid=document.getElementById('tool-grid');if(grid&&!document.getElementById('pe-no-results')){var empty=document.createElement('div');empty.id='pe-no-results';empty.textContent='No tools found. Try another search.';grid.parentNode.appendChild(empty);}
+})();
+</script>
+
 </body></html>
