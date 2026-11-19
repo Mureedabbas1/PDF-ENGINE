@@ -1,0 +1,21 @@
+{
+  "id": "/",
+  "name": "PDF Engine — PDF Tools",
+  "short_name": "PDF Engine",
+  "description": "Free browser-based PDF tools. No sign-up required.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#070B1A",
+  "theme_color": "#070B1A",
+  "categories": ["productivity", "utilities"],
+  "icons": [
+    {
+      "src": "/icons/pdf-engine-512.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
