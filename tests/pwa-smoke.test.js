@@ -38,3 +38,5 @@ assert.ok(index.includes('pe-welcome-seen'), 'Welcome screen must show once per 
 console.log('PWA tests passed for ' + pages.length + ' pages.');
 assert.ok(index.includes('pe-pwa-status'), 'Offline indicator and update banner missing');
 assert.ok(index.includes('Large file ('), 'Large file warning missing');
+assert.equal((index.match(/<h1\b/g) || []).length, 3, 'Welcome screen must not add a second H1 (home H1 + 2 routed-page H1 templates)');
+assert.ok(index.includes('rel="preconnect" href="https://cdnjs.cloudflare.com"'), 'CDN preconnect missing');
