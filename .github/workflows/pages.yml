@@ -26,6 +26,8 @@ jobs:
         run: node tests/smoke.test.js
       - name: Run SEO and AdSense smoke tests
         run: node tests/seo-smoke.test.js
+      - name: Run PWA smoke tests
+        run: node tests/pwa-smoke.test.js
 
   deploy:
     needs: test

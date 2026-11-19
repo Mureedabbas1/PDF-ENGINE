@@ -3,7 +3,8 @@
   "name": "PDF Engine — PDF Tools",
   "short_name": "PDF Engine",
   "description": "Free browser-based PDF tools. No sign-up required.",
-  "start_url": "/",
+  "lang": "en",
+  "start_url": "/?source=pwa",
   "scope": "/",
   "display": "standalone",
   "orientation": "any",
@@ -11,11 +12,15 @@
   "theme_color": "#070B1A",
   "categories": ["productivity", "utilities"],
   "icons": [
-    {
-      "src": "/icons/pdf-engine-512.svg",
-      "sizes": "any",
-      "type": "image/svg+xml",
-      "purpose": "any maskable"
-    }
+    { "src": "/icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "/icons/icon-maskable-192.png", "sizes": "192x192", "type": "image/png", "purpose": "maskable" },
+    { "src": "/icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" },
+    { "src": "/icons/pdf-engine-512.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ],
+  "shortcuts": [
+    { "name": "Merge PDF", "short_name": "Merge", "url": "/index.html?source=shortcut#/merge-pdf", "icons": [{ "src": "/icons/icon-192.png", "sizes": "192x192", "type": "image/png" }] },
+    { "name": "Split PDF", "short_name": "Split", "url": "/index.html?source=shortcut#/split-pdf", "icons": [{ "src": "/icons/icon-192.png", "sizes": "192x192", "type": "image/png" }] },
+    { "name": "Compress PDF", "short_name": "Compress", "url": "/index.html?source=shortcut#/compress-pdf", "icons": [{ "src": "/icons/icon-192.png", "sizes": "192x192", "type": "image/png" }] }
   ]
 }
