@@ -824,6 +824,8 @@ body{padding-bottom:86px}
       files = cfg.multiple ? files.concat(good) : [good[0]];
       res.innerHTML = '';
       draw();
+      var big = good.filter(function (f) { return f.size > 50 * 1048576; });
+      if (big.length) setMsg('Large file (' + Math.round(big[0].size / 1048576) + ' MB). It can be slow or fail on phones. Try a smaller file if it stops.', 'info');
     }
     function draw() {
       list.innerHTML = '';
@@ -1356,4 +1358,31 @@ window.PE_DATA.homeTitle=document.title;</script>
 })();
 </script>
 
+<script id="pe-pwa-status">
+(function(){
+  var css=document.createElement('style');
+  css.textContent='.pe-bar{position:fixed;left:12px;right:12px;bottom:12px;z-index:9999;max-width:520px;margin:0 auto;padding:12px 16px;border-radius:14px;background:#0e1233;color:#F8FAFC;border:1px solid rgba(34,211,238,.5);box-shadow:0 10px 30px rgba(0,0,0,.4);font:600 14px/1.4 system-ui,sans-serif;display:flex;gap:12px;align-items:center;justify-content:space-between}.pe-bar button{min-height:40px;padding:0 16px;border:0;border-radius:10px;background:linear-gradient(100deg,#22D3EE,#34D399);color:#06212b;font-weight:800;cursor:pointer}';
+  document.head.appendChild(css);
+  var off=null;
+  function setOffline(){
+    if(navigator.onLine){if(off){off.remove();off=null;}return;}
+    if(off)return;
+    off=document.createElement('div');off.className='pe-bar';off.setAttribute('role','status');
+    off.textContent='You are offline. Tools you already opened still work.';
+    document.body.appendChild(off);
+  }
+  window.addEventListener('online',setOffline);window.addEventListener('offline',setOffline);setOffline();
+  if('serviceWorker' in navigator){
+    var hadController=!!navigator.serviceWorker.controller,shown=false;
+    navigator.serviceWorker.addEventListener('controllerchange',function(){
+      if(!hadController||shown){hadController=true;return;}
+      shown=true;
+      var bar=document.createElement('div');bar.className='pe-bar';bar.setAttribute('role','status');
+      bar.innerHTML='<span>New version is ready.</span><button type="button">Refresh</button>';
+      bar.querySelector('button').addEventListener('click',function(){location.reload();});
+      document.body.appendChild(bar);
+    });
+  }
+})();
+</script>
 </body></html>

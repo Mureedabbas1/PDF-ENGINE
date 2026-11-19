@@ -36,3 +36,5 @@ const index = fs.readFileSync('index.html', 'utf8');
 assert.ok(!index.includes('backgrond.png'), 'Heavy 2 MB background must not be used');
 assert.ok(index.includes('pe-welcome-seen'), 'Welcome screen must show once per session');
 console.log('PWA tests passed for ' + pages.length + ' pages.');
+assert.ok(index.includes('pe-pwa-status'), 'Offline indicator and update banner missing');
+assert.ok(index.includes('Large file ('), 'Large file warning missing');
