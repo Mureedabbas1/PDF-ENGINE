@@ -49,4 +49,21 @@ assert.ok(robots.includes('Sitemap: ' + BASE + '/sitemap.xml'), 'robots.txt must
 assert.ok(sitemap.includes('<loc>' + BASE + '/</loc>'), 'Sitemap must include homepage');
 assert.ok(fs.readFileSync('ads.txt', 'utf8').includes('google.com, pub-6162822251101594, DIRECT, f08c47fec0942fa0'), 'ads.txt publisher record is missing or incorrect');
 
-console.log('PDF Engine SEO smoke tests passed: ' + files.length + ' tool/guide pages checked for titles, descriptions, canonicals, robots, H1, sitemap and AdSense.');
+
+const qrFiles = fs.readdirSync('.').filter(name => /^[a-z0-9-]+-qr-generator\.html$/i.test(name));
+assert.equal(qrFiles.length, 30, 'Expected exactly 30 standalone QR generator pages');
+for (const file of qrFiles) {
+  const html = fs.readFileSync(file, 'utf8');
+  const canonical = (html.match(/<link\s+[^>]*rel=["']canonical["'][^>]*href=["']([^"']+)["'][^>]*>/i) || [])[1];
+  assert.ok(canonical && sitemap.includes('<loc>' + canonical + '</loc>'), file + ': QR canonical missing from sitemap');
+  assert.ok(html.includes('id="qr-learning-guide"'), file + ': missing original QR use and safety guide');
+  assert.ok(html.includes('adsbygoogle.js?client=' + PUBLISHER), file + ': missing AdSense ownership loader');
+  assert.ok(html.includes('name="google-adsense-account" content="' + PUBLISHER + '"'), file + ': missing AdSense account meta');
+  assert.ok(!/pdfleo/i.test(html), file + ': old PDFLeo branding remains');
+}
+const qrHub = fs.readFileSync('qr-code-tools.html', 'utf8');
+const qrLinks = Array.from(qrHub.matchAll(/href=["']\/([a-z0-9-]+-qr-generator\.html)["']/gi));
+assert.equal(qrLinks.length, 30, 'QR directory must link to all 30 generators');
+assert.ok(qrHub.includes('id="qr-usage-guide"'), 'QR directory is missing its selection and safety guide');
+assert.ok(fs.readFileSync('index.html', 'utf8').includes('id="pdf-workflow-guide"'), 'Homepage is missing the PDF workflow guide');
+console.log('QR generator pages checked: ' + qrFiles.length + ' unique landing pages, AdSense ownership code, sitemap links and original guidance.');
